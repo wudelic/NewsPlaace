@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zh.mapper.NewsMapper">
+    <!--新闻基本结果集-->
+    <resultMap id="BaseResultMap" type="com.zh.pojo.News">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="topic" property="topic" jdbcType="VARCHAR"/>
+        <result column="reporterId" property="reporterId" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="content" property="content" jdbcType="LONGVARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="click" property="click" jdbcType="TINYINT"/>
+        <result column="tabId" property="tabId" jdbcType="INTEGER"/>
+        <result column="editorId" property="editorId" jdbcType="INTEGER"/>
+    </resultMap>
+    <!--新闻基本结果集
+    <resultMap id="BaseResultMap" type="com.zh.pojo.News">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="topic" property="topic" jdbcType="VARCHAR"/>
+        <result column="reporterId" property="reporterId" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="detail" property="detail" jdbcType="LONGVARCHAR"/>
+        <result column="picture" property="picture" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="TINYINT"/>
+        <result column="click" property="click" jdbcType="INTEGER"/>
+    </resultMap>-->
+
+    <!--用于text 读取-->
+    <resultMap id="ResultMapWithBLOBs" type="com.zh.pojo.News" extends="BaseResultMap">
+        <result column="content" property="content" jdbcType="LONGVARCHAR"/>
+    </resultMap>
+    <!--主题和用户信息结果集 用于首页显示-->
+    <resultMap id="topicAndUserInfo" type="com.zh.pojo.News">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="topic" property="topic" jdbcType="VARCHAR"/>
+        <result column="reporterId" property="reporterId" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="content" property="content" jdbcType="LONGVARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="click" property="click" jdbcType="TINYINT"/>
+        <result column="tabId" property="tabId" jdbcType="INTEGER"/>
+        <result column="editorId" property="editorId" jdbcType="INTEGER"/>
+        <association property="reporter" javaType="com.zh.pojo.Reporter">
+            <id column="id" property="id" jdbcType="INTEGER"/>
+            <result column="name" property="name" jdbcType="VARCHAR" />
+        </association>
+        <association property="tab" javaType="com.zh.pojo.Tab">
+            <id column="id" property="id" jdbcType="INTEGER" />
+            <result column="tabName" property="tabName" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+    <!--主题和用户信息结果集 用于新闻详细显示-->
+    <resultMap id="topicAndUserDetail" type="com.zh.pojo.News">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="topic" property="topic" jdbcType="VARCHAR"/>
+        <result column="reporterId" property="reporterId" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="content" property="content" jdbcType="LONGVARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="click" property="click" jdbcType="TINYINT"/>
+        <result column="tabId" property="tabId" jdbcType="INTEGER"/>
+        <result column="editorId" property="editorId" jdbcType="INTEGER"/>
+        <association property="reporter" javaType="com.zh.pojo.Reporter">
+            <id column="id" property="id" jdbcType="INTEGER"/>
+            <result column="name" property="name" jdbcType="VARCHAR" />
+        </association>
+        <association property="editor" javaType="com.zh.pojo.Editor">
+            <id column="id" property="id" jdbcType="INTEGER"/>
+            <result column="Ename" property="name" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+    <!--
+    <select id="listTopicsAndUsers" resultType="com.zh.pojo.News">
+        select * from news
+    </select>
+    -->
+    <select id="listTopicsAndUsers" resultMap="topicAndUserInfo">
+        select news.id,news.topic,news.reporterId,news.create_time,news.content,
+        news.status,news.click,news.tabId,news.editorId,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId = reporter.id
+        left join tab on tab.id = news.tabId
+        group by news.id order by news.id desc
+    </select>
+
+    <select id="listTopicsAndUsersOfTab" parameterType="java.lang.Integer" resultMap="topicAndUserInfo">
+        select news.id,news.topic,news.reporterId,news.create_time,news.content,
+        news.status,news.click,news.tabId,news.editorId,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId = reporter.id
+        left join tab on tab.id = news.tabId where tab.id=#{id,jdbcType=INTEGER}
+        group by news.id order by news.id desc
+    </select>
+    <select id="countNews" resultType="java.lang.Integer">
+        select count(*) from news
+    </select>
+
+    <insert id="insert" parameterType="com.zh.pojo.News">
+        insert INTO
+        news (topic, reporterId, content, tabId)
+        VALUE
+        (#{topic}, #{reporterId}, #{content}, #{tabId})
+    </insert>
+
+    <update id="clickAddOne" parameterType="java.lang.Integer">
+        update news
+        set
+        click = click+1
+        where id=#{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="selectById" parameterType="java.lang.Integer" resultMap="topicAndUserDetail">
+        select news.*,reporter.name,editor.name as Ename from news,reporter,editor
+        where news.id=#{id,jdbcType=INTEGER}
+        and news.reporterId=reporter.id
+        and news.editorId=editor.id
+    </select>
+</mapper>

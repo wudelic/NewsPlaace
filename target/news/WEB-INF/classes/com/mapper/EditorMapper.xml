@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zh.mapper.EditorMapper">
+    <select id="queryAllEditor" resultType="com.zh.pojo.Editor">
+        SELECT * from editor
+    </select>
+
+    <select id="queryEdiByIdNum" resultType="com.zh.pojo.Editor">
+        select * from editor
+        <where>
+            <if test="idNumber != null and idNumber != ''">
+                AND idNumber LIKE concat('%',#{idNumber},'%')
+            </if>
+        </where>
+    </select>
+
+    <select id="checkEdi" resultType="com.zh.pojo.Editor" parameterType="String">
+        select * from editor where idNumber = #{idNumber}
+    </select>
+
+    <select id="existsEdi" resultType="java.lang.Integer">
+        select count(*) from editor where idNumber = #{idNumber}
+    </select>
+
+    <insert id="signUpEdi" parameterType="com.zh.pojo.Editor">
+        INSERT INTO
+        editor (name, password, gender, idNumber, age, address, phoneNum, email, detail)
+        VALUE
+        (#{name}, #{password}, #{gender}, #{idNumber}, #{age}, #{address}, #{phoneNum}, #{email}, #{detail})
+    </insert>
+
+    <delete id="deleteEdiById" parameterType="java.lang.Integer">
+        DELETE from editor where id=#{id}
+    </delete>
+
+    <insert id="insertSelective" parameterType="com.zh.pojo.Editor">
+        insert INTO
+        editor (name, password, gender, idNumber, age, address, phoneNum, email, detail)
+        VALUE
+        (#{name}, #{password}, #{gender}, #{idNumber}, #{age}, #{address}, #{phoneNum}, #{email}, #{detail})
+    </insert>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="com.zh.pojo.Editor">
+        select
+          id,name,password,gender,idNumber,email,phoneNum
+        from editor
+        WHERE id=#{id}
+    </select>
+    <update id="updateByPrimaryKeySelective" parameterType="com.zh.pojo.Editor">
+        UPDATE editor
+        <set>
+            <if test="name != null">
+                name=#{name},
+            </if>
+            <if test="password != null">
+                password=#{password},
+            </if>
+            <if test="gender != null">
+                gender=#{gender},
+            </if>
+            <if test="idNumber != null">
+                idNumber=#{idNumber},
+            </if>
+            <if test="phoneNum != null">
+                phoneNum=#{phoneNum},
+            </if>
+            <if test="email != null">
+                email=#{email}
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+    <select id="getIdNum" parameterType="java.lang.String" resultType="java.lang.String">
+        select idNumber from editor
+        where idNumber LIKE concat('%',#{idNumber},'%') limit 0,4
+    </select>
+    <delete id="deleteByIds" parameterType="java.lang.String">
+        delete from editor where id in
+        <foreach collection="array" item="ids" open="(" separator="," close=")">
+            #{ids}
+        </foreach>
+    </delete>
+
+    <select id="selectByIdNum" resultType="com.zh.pojo.Editor" parameterType="java.lang.String">
+        select * FROM editor
+        WHERE idNumber = #{idNumber}
+    </select>
+
+    <select id="countEdi" resultType="java.lang.Integer">
+        select count(*) from editor
+    </select>
+</mapper>

@@ -1,0 +1,558 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8"%>
+<%
+    String path = request.getContextPath();
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>管理员</title>
+    <link rel="stylesheet" href="<%=path %>/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="<%=path %>/static/js/jquery-3.4.1.min.js"></script>
+    <script src="<%=path %>/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="<%=path %>/static/js/Reporter.js"></script>
+    <script src="<%=path %>/static/js/jquery.cityselect.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="<%=path %>/images/admin.jpg" height="100%" />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a class="icon-bar" href="#" >管理员</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>欢迎您,${sessionScope.admin.username}</a>
+                </li>
+                <li><a href="<%=path %>/admin/outLogin">安全退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <button class="list-group-item active dropdown-toggle"><span claghss="glyphicon glyphicon-cog" ></span>人员管理
+            </button>
+            <div id="hide">
+                <button  class="list-group-item reporter" >
+                <span class="glyphicon glyphicon-align-left" aria-hidden="true" >
+                    </span>记者管理</button>
+                <a href="<%=path%>/WEB-INF/jsp/ManagementE.jsp" class="list-group-item editor" >
+                        <span class="glyphicon glyphicon-align-left" aria-hidden="true">
+                    </span>主编管理</a>
+            </div>
+        </div>
+        <div class="col-sm-10">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    搜索
+                </div>
+                <div class="panel-body">
+                    <form role="form" class="form-inline"><!--处理-->
+                        <div class="form-group">
+                            <input type="text" class="form-control SearchIdN"  name="idNumber" placeholder="请输入证件号" id="idN">
+                            <div id="searchBox" style="position:absolute; z-index:9999; background:#ffffff; width: 170px; border: 1px solid #ccc;display: none">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="button" class="btn btn-default" id="searchByIdNumber" value="开始搜索"/>
+                            <input type="button" class="btn btn-default" value="搜索全部" id="searchAll" />
+                        </div>
+                    </form>
+
+                    <div class="col-md-4 col-md-offset-8">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addReporter" >新增</button>
+                        <button type="button" class="btn btn-danger" id="deleteAll-btn">批量删除</button>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped" id="reporter_table">
+                    <thead>
+                    <tr>
+                        <th><input type="checkbox"  id="check_all"/></th>
+                        <th>编号</th>
+                        <th>姓名</th>
+                        <th>密码</th>
+                        <th>出生日期</th>
+                        <th>性别</th>
+                        <th>证件号</th>
+                        <th>地址</th>
+                        <th>手机号码</th>
+                        <th>邮箱</th>
+                        <th>介绍</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <!--分页-->
+            <div class="row">
+                <div class="col-md-6" id="page_info_area">
+
+                </div>
+                <div class="col-md-6" id="page_nav_area">
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="addReporter" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-title">
+                <h1 class="text-center">新增</h1>
+            </div>
+            <div class="modal-body">
+                <form class="form-group" >
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input class="form-control" type="text" id="name" required name="name">
+                        <span id="nameInfo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input class="form-control" type="password" placeholder="至少6位字母或数字" id="password" name="password">
+                        <span id="passwordInfo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>性别</label><br>
+                        <label for="male">男</label>
+                        <input type="radio" name="gender" id="editmale" value="男">
+                        <label for="female">女</label>
+                        <input type="radio" name="gender" id="editfemale" value="女">
+                    </div>
+                    <div class="form-group">
+                        <label for="idNumber">证件号</label>
+                        <input class="form-control" type="text" required id="idNumber" name="idNumber">
+                        <span id="idNumberInfo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">出生日期</label>
+                        <input class="form-control" type="date" required id="age" name="age">
+                    </div>
+                    <div class="form-group">
+                        <label for="">地址</label>
+                        <div id="city">
+                            <select class="prov" ></select>
+                            <select class="city" disabled="disabled"></select>
+                            <select class="dist" disabled="disabled"></select>
+                        </div>
+                        <input type="hidden" name="address" id="address" >
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNum">手机号码</label>
+                        <input class="form-control" type="text" required id="phoneNum" name="phoneNum">
+                        <span id="phoneNumInfo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input class="form-control" type="email" placeholder="例如:123@123.com" id="email" name="email">
+                        <span id="emailInfo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="detail">介绍你自己</label>
+                        <input class="form-control" type="text" id="detail" name="detail">
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-primary submit" type="button" id="addRep" onclick="return checkadd(), test()"  >提交</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="editReporterModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-title">
+                <h1 class="text-center">修改用户信息</h1>
+            </div>
+            <div class="modal-body">
+                <form class="form-group" >
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input class="form-control" type="text" id="editname" required name="name">
+                        <span id="editnameInfo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input class="form-control" type="password"  id="editpassword" name="password" >
+                        <span id="editpasswordInfo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>性别</label><br>
+                        <label for="male">男</label>
+                        <input type="radio" name="gender" id="male" value="男">
+                        <label for="female">女</label>
+                        <input type="radio" name="gender" id="female" value="女">
+                    </div>
+                    <div class="form-group">
+                        <label for="idNumber">证件号</label>
+                        <input class="form-control" type="text" required id="editidNumber" name="idNumber">
+                        <span id="editidNumberInfo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNum">手机号码</label>
+                        <input class="form-control" type="text" required id="editphoneNum" name="phoneNum">
+                        <span id="editphoneNumInfo"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input class="form-control" type="email"  id="editemail" name="email">
+                        <span id="editemailInfo"></span>
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-primary submit" type="button" id="saveRepUpdate">更新</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                    <input type="hidden" name="_method" value="PUT"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var currentPage;
+    var total;
+    var pn = 1;
+    $("#searchByIdNumber").click(function () {
+        var idNumber = $("#idN").val();
+        if (idNumber==""){
+            alert("不能为空");
+            return false;
+        }
+       to_page(1);
+    })
+    $("#searchAll").click(function(){
+        var idNumber = "";
+        to_page(1);
+    })
+    function to_page(pn){
+        var idNumber = $("#idN").val();
+        $.ajax({
+            url:"${path}/reporter/query/RepByIdNumber",
+            data:{pn:pn,idNumber:idNumber},
+            type:"GET",
+            success:function (result) {
+                build_reporter_table(result);
+                build_page_info(result);
+                build_page_nav(result);
+            }
+        });
+    }
+
+    function build_reporter_table(result){
+                $("#reporter_table tbody").empty();
+
+                var reporter = result.extend.pageInfo.list;
+                $.each(reporter,function (index, item) {
+                    var checkboxTd = $("<td><input type='checkbox' class='check_item'/></td>");
+                    var idTd = $("<td></td>").append(item.id)
+                    var nameTd = $("<td></td>").append(item.name);
+                    var passwordTd = $("<td></td>").append(item.password);
+                    var ageTd = $("<td></td>").append(item.age);
+                    var genderTd = $("<td></td>").append(item.gender);
+                    var idNumberTd = $("<td></td>").append(item.idNumber);
+                    var addressTd = $("<td></td>").append(item.address);
+                    var phoneNumTd = $("<td></td>").append(item.phoneNum);
+                    var emailTd = $("<td></td>").append(item.email);
+                    var detailTd = $("<td></td>").append(item.detail);
+
+                    var editBtn = $("<button></button>").addClass("btn btn-primary btn-sm edit-btn")
+                        .append($("<span></span>").addClass("glyphicon glyphicon-pencil")).append("编辑");
+                    var delBtn = $("<button></button>").addClass("btn btn-danger btn-sm delete-btn")
+                        .append($("<span></span>").addClass("glyphicon glyphicon-trash")).append("删除");
+                    var btnTd = $("<td></td>").append(editBtn).append(" ").append(delBtn);
+                    //点击编辑按钮的时候就可以通过该属性获得该员工的id
+                        editBtn.attr("edit_id",item.id);
+
+                    $("<tr></tr>").append(checkboxTd)
+                        .append(idTd)
+                        .append(nameTd)
+                        .append(passwordTd)
+                        .append(ageTd)
+                        .append(genderTd)
+                        .append(idNumberTd)
+                        .append(addressTd)
+                        .append(phoneNumTd)
+                        .append(emailTd)
+                        .append(detailTd)
+                        .append(btnTd)
+                        .appendTo("#reporter_table tbody");
+                });
+            }
+    function build_page_info(result){
+                $("#page_info_area").empty();
+                $("#page_info_area").append("当前"+result.extend.pageInfo.pageNum+"页,总"+
+                    result.extend.pageInfo.pages+"页,总"+
+                    result.extend.pageInfo.total+"条记录");
+                    currentPage = result.extend.pageInfo.pageNum;
+                    total = result.extend.pageInfo.pages;
+            }
+    function build_page_nav(result){
+                $("#page_nav_area").empty();
+
+                var ul = $("<ul></ul>").addClass("pagination");
+
+                //构建元素
+                var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href","#"));
+                var prePageLi = $("<li></li>").append($("<a></a>").append("&laquo;"));
+                if(result.extend.pageInfo.hasPreviousPage == false){
+                    firstPageLi.addClass("disabled");
+                    prePageLi.addClass("disabled");
+                }else{
+                    //为元素添加点击翻页
+                    firstPageLi.click(function(){
+                        to_page(1);
+                    })
+                    prePageLi.click(function(){
+                        to_page(result.extend.pageInfo.pageNum-1);
+                    })
+                }
+
+                var nextPageLi = $("<li></li>").append($("<a></a>").append("&raquo;"));
+                var laststPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href","#"));
+                if(result.extend.pageInfo.hasNextPage == false){
+                    nextPageLi.addClass("disabled");
+                    laststPageLi.addClass("disabled");
+                }else{
+                    //为元素添加点击翻页
+                    nextPageLi.click(function(){
+                        to_page(result.extend.pageInfo.pageNum+1);
+                    })
+                    laststPageLi.click(function(){
+                        to_page(result.extend.pageInfo.pages);
+                    })
+                }
+                //添加首页和前一页的显示
+                ul.append(firstPageLi).append(prePageLi);
+
+                //1,2,..5遍历给ul中添加页码提示
+                $.each(result.extend.pageInfo.navigatepageNums,function(index,item){
+
+                    var numLi = $("<li></li>").append($("<a></a>").append(item));
+                    if(result.extend.pageInfo.pageNum == item){
+                        numLi.addClass("active");
+                    }
+                    numLi.click(function(){
+                        to_page(item);
+                    })
+
+                    ul.append(numLi);
+
+                })
+                //添加下一页和末页的提示
+                ul.append(nextPageLi).append(laststPageLi);
+                //把ul加入到nav
+                var navEle = $("<nav></nav>").append(ul);
+                navEle.appendTo("#page_nav_area");
+
+            }
+
+    $(document).on("click",".delete-btn",function(){
+                //alert($(this).parents("tr").find("td:eq(1)").text());
+                var delete_id = $(this).parents("tr").find("td:eq(1)").text();
+                var delete_name = $(this).parents("tr").find("td:eq(2)").text();
+                if (confirm("你确认要删除"+delete_name+"吗?")){
+                    $.ajax({
+                        url:"${path}/reporter/delete/" + delete_id,
+                        type:"GET",
+                        success:function(result){
+                            to_page(1);
+                            alert("删除成功");
+                        },
+                        error:function(){
+                            alert("删除失败");
+                        }
+                    })
+                }
+            });
+
+    $(document).on("click",".edit-btn",function(){
+                var rep_id = $(this).attr("edit_id");
+                $("#saveRepUpdate").attr("edit_id",rep_id);
+                $.ajax({
+                    url:"${path}/reporter/"+rep_id,
+                    type:"GET",
+                    success:function (result) {
+                        $("#editname").val(result.extend.rep.name);
+                        $("#editpassword").val(result.extend.rep.password);
+                        $("#editReporterModal input[name=gender]").val([result.extend.rep.gender]);
+                        $("#editidNumber").val(result.extend.rep.idNumber);
+                        $("#editphoneNum").val(result.extend.rep.phoneNum);
+                        $("#editemail").val(result.extend.rep.email);
+                    }
+                });
+                $('#editReporterModal').modal({
+                    backdrop:'static'
+                })
+            });
+
+    $("#saveRepUpdate").click(function(){
+                var rep_id = $(this).attr("edit_id");
+                $.ajax({
+                    url:"${path}/reporter/update/" + rep_id,
+                    type:"PUT",
+                    data:$("#editReporterModal form").serialize(),
+
+                    success:function(result){
+                            if (result.code == 100) {
+                                $("#editReporterModal").modal('hide');
+                                to_page(currentPage);
+                                alert("修改成功");
+                            }
+                    }
+                })
+            });
+    $("#addRep").click(function () {
+                $.ajax({
+                    url:"${path}/reporter/add",
+                    data:$("#addReporter form").serialize(),
+                    type:'post',
+                    success:function(result){
+                        $("#addReporter").modal('hide');
+                        to_page(total);
+                        alert("新增成功");
+                    }
+
+                })
+            })
+
+    $("#city").citySelect({
+               prov: "广东",
+               city: "珠海",
+               dist: "金湾区",
+               nodata: "none",
+           })
+    function test(){
+               var prov = $(".prov option:selected");
+               var city = $(".city option:selected");
+               var dist = $(".dist option:selected");
+               var address = prov.val()+city.val()+dist.val();
+               $("#address").val(address);
+           }
+
+    function overFn(obj){
+               $(obj).css("background", "#DBEAF9")
+           }
+    function outFn(obj){
+                $(obj).css("background", "#fff")
+           }
+    function clickFn(obj){
+                $("#idN").val($(obj).html());
+                $("#searchBox").css("display", "none");
+           }
+    $(".SearchIdN").keyup(function(){
+               var idNumber = $(this).val();
+               var content = "";
+               if(idNumber == ""){
+                   $("#serchBox").css("display","none");
+                    return ;
+               }
+               $.ajax({
+                   type:"GET",
+                   url:"${path}/reporter/getIdNumber",
+                   cache:false,
+                   data:{idNumber: idNumber},
+                   success: function(data){
+                       if (data.length>0){
+                           for (var i=0;i<data.length;i++){
+                               content += "<div style='padding: 5px;cursor: pointer; ' onclick='clickFn(this)' onmouseover='overFn(this)' onmouseout='outFn(this)'>"+data[i]+"</div>";
+                           }
+                           $("#searchBox").html(content);
+                           $("#searchBox").css("display","block");
+                       }
+
+                   }
+               })
+           })
+
+    $("#check_all").click(function(){
+        var status = $(this).prop("checked");
+        $(".check_item").prop("checked",status);
+    });
+    $(document).on("click",".check_item",function(){
+        var check_length = $(".check_item:checked").length;
+        var total_length = $(".check_item").length;
+        if(check_length == total_length ){
+            $("#check_all").prop("checked",true);
+        }else{
+            $("#check_all").prop("checked",false);
+        }
+    });
+    $("#deleteAll-btn").click(function(){
+        var checkNum = $(".check_item:checked").length;
+        if (checkNum == 0){
+            {
+                alert("请至少选择一个！");
+                return;
+            }
+        }
+        if(confirm("确定删除选中项目?")){
+            var checkedList = new Array();
+            var ids = '';
+            $(".check_item:checkbox").each(function(){
+                if (this.checked == true){
+                    checkedList.push($(this).parents("tr").find("td:eq(1)").text());
+                }
+            });
+            $.ajax({
+                type:"post",
+                url:"${path}/reporter/deleteByIds",
+                data:{ids:checkedList.toString()},
+                success:function(){
+                    alert("删除成功");
+                    to_page(1);
+                    $("#check_all").prop("checked",false);
+                },
+                error:function () {
+                    alert("删除失败");
+                }
+            })
+        }
+    })
+
+
+</script>
+</body>
+</html>
