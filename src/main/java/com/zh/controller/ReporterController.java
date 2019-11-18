@@ -3,14 +3,19 @@ package com.zh.controller;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.zh.pojo.Msg;
+import com.zh.pojo.News;
 import com.zh.pojo.Reporter;
+import com.zh.service.EditorService;
+import com.zh.service.NewsService;
 import com.zh.service.ReporterService;
+import com.zh.service.TabService;
 import com.zh.util.ProduceMD5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -25,6 +30,14 @@ public class ReporterController {
     @Autowired
     ReporterService reporterService;
 
+    @Autowired
+    TabService tabService;
+
+    @Autowired
+    EditorService editorService;
+
+    @Autowired
+    NewsService newsService;
     @RequestMapping("/query/allReporterJson")
     @ResponseBody
     public Msg getReportersWithJson(@RequestParam(value = "pn", defaultValue = "1") Integer pn,
@@ -170,5 +183,23 @@ public class ReporterController {
         return "redirect:/";
     }
 
+    @RequestMapping("/member/{name}")
+    public ModelAndView personalCenter(@PathVariable("name")String name,HttpSession session){
+        //统计
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        //获取用户信息
+        Integer Rid = (Integer)session.getAttribute("RepId");
+        Reporter reporter = reporterService.getRepById(Rid);
+
+        ModelAndView mv = new ModelAndView("user_info");
+        Reporter result = reporterService.getRepByName(name);
+        mv.addObject("RepInfo",result);
+        mv.addObject("newsNum", newsNum);
+        mv.addObject("usersNum",RNum+ENum);
+        mv.addObject("reporter",reporter);
+        return mv;
+    }
 }
 

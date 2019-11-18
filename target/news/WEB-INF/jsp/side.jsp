@@ -15,8 +15,8 @@
             </div>
             <ul class="list-group" style="width: 100%">
                 <li class="list-group-item">
-                    <a href="/WEB-INF/jsp/signup.jsp" class="btn btn-default btn-block">成为主编</a>
-                    <a href="/WEB-INF/jsp/signin.jsp" class="btn btn-primary btn-block">登录</a>
+                    <a href="/signup" class="btn btn-default btn-block">成为主编</a>
+                    <a href="/signin" class="btn btn-primary btn-block">登录</a>
                 </li>
             </ul>
         </div>

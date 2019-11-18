@@ -31,4 +31,6 @@ public interface ReporterMapper {
     Reporter selectByIdNum(String idNumber);
 
     int countRep();
+
+    Reporter selectByName(String name);
 }

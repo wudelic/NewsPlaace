@@ -44,4 +44,24 @@ public class NewsServiceImpl implements NewsService {
         return news;
 
     }
+
+    @Override
+    public List<News> selectNotPassNews(Integer RepId) {
+        return newsMapper.selectNotPassNews(RepId);
+    }
+
+    @Override
+    public List<News> selectPassNews(Integer RepId) {
+        return newsMapper.selectPassNews(RepId);
+    }
+
+    @Override
+    public List<News> selectAllNews(Integer RepId) {
+        return newsMapper.selectAllNews(RepId);
+    }
+
+    @Override
+    public List<News> selectRejectNews(Integer RepId) {
+        return newsMapper.selectRejectNews(RepId);
+    }
 }

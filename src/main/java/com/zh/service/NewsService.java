@@ -32,4 +32,12 @@ public interface NewsService {
      * 获取指定id的新闻
      */
     News selectById(Integer id);
+
+    List<News> selectNotPassNews(Integer RepId);
+
+    List<News> selectPassNews(Integer RepId);
+
+    List<News> selectAllNews(Integer RepId);
+
+    List<News> selectRejectNews(Integer RepId);
 }

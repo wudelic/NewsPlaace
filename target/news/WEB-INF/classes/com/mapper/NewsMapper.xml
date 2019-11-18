@@ -116,4 +116,27 @@
         and news.reporterId=reporter.id
         and news.editorId=editor.id
     </select>
+
+    <select id="selectNotPassNews" resultType="com.zh.pojo.News" parameterType="java.lang.Integer">
+        select * from news
+        where reporterId=#{RepId}
+        and status=0
+    </select>
+
+    <select id="selectPassNews" resultType="com.zh.pojo.News">
+        select * from news
+        where reporterId=#{RepId}
+        and status=1
+    </select>
+
+    <select id="selectAllNews" resultType="com.zh.pojo.News">
+        select * from news
+        where reporterId=#{RepId}
+    </select>
+
+    <select id="selectRejectNews" resultType="com.zh.pojo.News">
+        select * from news
+        where reporterId=#{RepId}
+        and status=2
+    </select>
 </mapper>

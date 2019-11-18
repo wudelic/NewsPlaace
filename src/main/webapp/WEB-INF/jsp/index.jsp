@@ -74,6 +74,7 @@
             </div>
             <div style="width: 5%;float: right;text-align: center">
                 <span class="badge">${news.click}</span>
+
             </div>
         </div>
     </li>

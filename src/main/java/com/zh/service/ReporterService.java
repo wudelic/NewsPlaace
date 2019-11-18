@@ -33,4 +33,6 @@ public interface ReporterService {
     Reporter getRepByIdNum(String idNumber);
 
     int getRepNum();
+
+    Reporter getRepByName(String name);
 }

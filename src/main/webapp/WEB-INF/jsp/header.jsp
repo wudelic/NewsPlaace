@@ -48,19 +48,22 @@
                     <!--记者已登陆-->
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <p class="navbar-text"><a href="/member/${sessionScope.RepName}">${sessionScope.RepName}</a></p>
+                            <p class="navbar-text"><a href="/">首页</a></p>
                         </li>
                         <li>
-                            <p class="navbar-text"><a href="/settings">设置</a></p>
+                            <p class="navbar-text"><a href="/reporter/member/${sessionScope.RepName}">${sessionScope.RepName}</a></p>
                         </li>
                         <li>
-                            <p class="navbar-text"><a href="${Rpath}/reporter/outLogin">登出</a></p>
+                            <p class="navbar-text"><a href="/reporter/outLogin">登出</a></p>
                         </li>
                     </ul>
                 </c:if>
                 <c:if test="${!empty EdiId}">
                     <!--主编已登陆-->
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <p class="navbar-text"><a href="/">首页</a></p>
+                        </li>
                         <li>
                             <p class="navbar-text"><a href="/member/${sessionScope.EdiName}">${sessionScope.EdiName}</a></p>
                         </li>

@@ -40,4 +40,24 @@ public class MainController {
         newTopicPage.addObject("usersNum",RNum+ENum);
         return newTopicPage;
     }
+    @RequestMapping("/signin")
+    public ModelAndView toSignIn(){
+        ModelAndView S = new ModelAndView("signin");
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        S.addObject("newsNum",newsNum);
+        S.addObject("usersNum",RNum+ENum);
+        return S;
+    }
+    @RequestMapping("/signup")
+    public ModelAndView toSignUp(){
+        ModelAndView S = new ModelAndView("signup");
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        S.addObject("newsNum",newsNum);
+        S.addObject("usersNum",RNum+ENum);
+        return S;
+    }
 }

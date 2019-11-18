@@ -93,5 +93,9 @@
     <select id="countRep" resultType="java.lang.Integer">
         select count(*) from reporter
     </select>
+    <select id="selectByName" resultType="com.zh.pojo.Reporter">
+        select * from reporter
+        where name =#{name}
+    </select>
 </mapper>
 

@@ -16,4 +16,12 @@ public interface NewsMapper {
     int clickAddOne(Integer id);
 
     News selectById(Integer id);
+
+    List<News> selectNotPassNews(Integer RepId);
+
+    List<News> selectPassNews(Integer RepId);
+
+    List<News> selectAllNews(Integer repId);
+
+    List<News> selectRejectNews(Integer repId);
 }

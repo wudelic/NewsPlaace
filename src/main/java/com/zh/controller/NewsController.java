@@ -142,5 +142,87 @@ public class NewsController {
         return newsPage;
     }
 
+    /**
+     * 查找用户所有新闻
+
+    @RequestMapping("/n/{RepId}")
+    public ModelAndView toAllNews(@PathVariable("RepId")Integer RepId,HttpSession session){
+        News news = newsService.selectByRepId(RepId);
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+    }*/
+    /**
+     * 查询未过审核的新闻
+     */
+    @RequestMapping("/Rep/Nn")
+    public ModelAndView toNotpassNews(HttpSession session)
+    {
+        int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
+        List<News> news = newsService.selectNotPassNews(Rid);//根据用户id查
+        ModelAndView m = new ModelAndView("NotpassNews");
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        m.addObject("news",news);
+        m.addObject("newsNum", newsNum);
+        m.addObject("usersNum",RNum+ENum);
+        return m;
+    }
+    /**
+     * 过审核的新闻
+     */
+    @RequestMapping("/Rep/Pn")
+    public ModelAndView toPassNews(HttpSession session)
+    {
+        int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
+        List<News> news = newsService.selectPassNews(Rid);
+        ModelAndView m = new ModelAndView("passNews");
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        m.addObject("news",news);
+        m.addObject("newsNum", newsNum);
+        m.addObject("usersNum",RNum+ENum);
+        return m;
+    }
+    /**
+     * 上传过的所有新闻
+     */
+    @RequestMapping("/Rep/An")
+    public ModelAndView toAllNews(HttpSession session){
+        int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
+        List<News> news = newsService.selectAllNews(Rid);
+        ModelAndView m = new ModelAndView("passNews");
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        m.addObject("news",news);
+        m.addObject("newsNum", newsNum);
+        m.addObject("usersNum",RNum+ENum);
+        return m;
+    }
+    /**
+     * 被拒绝的新闻
+     */
+    @RequestMapping("/Rep/Rn")
+    public ModelAndView toRejectNews(HttpSession session){
+        int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
+        List<News> news = newsService.selectRejectNews(Rid);
+        ModelAndView m = new ModelAndView("passNews");
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        m.addObject("news",news);
+        m.addObject("newsNum", newsNum);
+        m.addObject("usersNum",RNum+ENum);
+        return m;
+    }
+
 
 }

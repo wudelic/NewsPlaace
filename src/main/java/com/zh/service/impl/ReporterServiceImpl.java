@@ -100,4 +100,10 @@ public class ReporterServiceImpl implements ReporterService {
         int count = reporterMapper.countRep();
         return count;
     }
+
+    @Override
+    public Reporter getRepByName(String name) {
+        Reporter reporter = reporterMapper.selectByName(name);
+        return reporter;
+    }
 }
