@@ -40,4 +40,12 @@ public interface NewsService {
     List<News> selectAllNews(Integer RepId);
 
     List<News> selectRejectNews(Integer RepId);
+
+    List<News> EselectNotPassNews(Integer Eid);
+
+    List<News> EselectPassNews(Integer Eid);
+
+    List<News> EselectAllNews(Integer Eid);
+
+    List<News> EselectRejectNews(Integer Eid);
 }

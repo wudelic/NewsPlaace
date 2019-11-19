@@ -64,4 +64,24 @@ public class NewsServiceImpl implements NewsService {
     public List<News> selectRejectNews(Integer RepId) {
         return newsMapper.selectRejectNews(RepId);
     }
+
+    @Override
+    public List<News> EselectNotPassNews(Integer Eid) {
+        return newsMapper.EselectNotPassNews(Eid);
+    }
+
+    @Override
+    public List<News> EselectPassNews(Integer Eid) {
+        return newsMapper.EselectPassNews(Eid);
+    }
+
+    @Override
+    public List<News> EselectAllNews(Integer Eid) {
+        return newsMapper.EselectAllNews(Eid);
+    }
+
+    @Override
+    public List<News> EselectRejectNews(Integer Eid) {
+        return newsMapper.EselectRejectNews(Eid);
+    }
 }

@@ -65,10 +65,7 @@
                             <p class="navbar-text"><a href="/">首页</a></p>
                         </li>
                         <li>
-                            <p class="navbar-text"><a href="/member/${sessionScope.EdiName}">${sessionScope.EdiName}</a></p>
-                        </li>
-                        <li>
-                            <p class="navbar-text"><a href="/settings">设置</a></p>
+                            <p class="navbar-text"><a href="/editor/member/${sessionScope.EdiName}">${sessionScope.EdiName}</a></p>
                         </li>
                         <li>
                             <p class="navbar-text"><a href="${Rpath}/editor/outLogin">登出</a></p>

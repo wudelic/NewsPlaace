@@ -99,4 +99,11 @@ public class EditorServiceImpl implements EditorService{
         int count = editorMapper.countEdi();
         return count;
     }
+
+    @Override
+    public Editor geEdiByName(String name) {
+        return editorMapper.selectByName(name);
+    }
+
+
 }

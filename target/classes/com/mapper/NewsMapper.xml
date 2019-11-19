@@ -139,4 +139,24 @@
         where reporterId=#{RepId}
         and status=2
     </select>
+
+    <select id="EselectAllNews" resultType="com.zh.pojo.News">
+        select * from news
+        where editorId = #{Eid}
+    </select>
+    <select id="EselectPassNews" resultType="com.zh.pojo.News">
+        select * from news
+        where editorId = #{Eid}
+        and status=1
+    </select>
+    <select id="EselectNotPassNews" resultType="com.zh.pojo.News">
+        select * from news
+        where editorId = #{Eid}
+        and status=0
+    </select>
+    <select id="EselectRejectNews" resultType="com.zh.pojo.News">
+        select * from news
+        where editorId = #{Eid}
+        and status=2
+    </select>
 </mapper>

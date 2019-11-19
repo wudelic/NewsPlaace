@@ -24,4 +24,12 @@ public interface NewsMapper {
     List<News> selectAllNews(Integer repId);
 
     List<News> selectRejectNews(Integer repId);
+
+    List<News> EselectNotPassNews(Integer eid);
+
+    List<News> EselectPassNews(Integer eid);
+
+    List<News> EselectAllNews(Integer eid);
+
+    List<News> EselectRejectNews(Integer eid);
 }

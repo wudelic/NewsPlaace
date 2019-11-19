@@ -7,52 +7,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/allNews.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/EditorMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/NewsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/ReporterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/ReporterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/mapper/EditorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/mapper/EditorMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/mapper/NewsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/mapper/NewsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/mapper/ReporterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/mapper/ReporterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/pojo/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/pojo/Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/EditorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/EditorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/ReporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/ReporterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/EditorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/EditorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/NewsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/ReporterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/ReporterServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/member.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user_info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/setting.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/panel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/panel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/side.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mapper/NewsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mapper/ReporterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mapper/ReporterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user_info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mapper/EditorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/EditorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/ReporterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/ReporterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/mapper/NewsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/mapper/NewsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/mapper/ReporterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/mapper/ReporterMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/NewsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/ReporterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/ReporterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/impl/NewsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/impl/NewsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/impl/ReporterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/impl/ReporterServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/NewsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/ReporterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/ReporterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/mapper/EditorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/mapper/EditorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/pojo/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/pojo/Editor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/EditorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/EditorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/impl/EditorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/impl/EditorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/EditorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/EditorController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/ReporterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/ReporterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/NewsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/NewsMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/ReporterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/ReporterMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/NewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/NewsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/ReporterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/ReporterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/NewsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/NewsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/ReporterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/ReporterServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/EditorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/EditorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/pojo/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/pojo/Editor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/EditorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/EditorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/EditorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/EditorServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/member.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/setting.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/panel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/user_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/user_info.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -228,7 +218,7 @@
       <workItem from="1573893625111" duration="5555000" />
       <workItem from="1573918762315" duration="7769000" />
       <workItem from="1573995407669" duration="12890000" />
-      <workItem from="1574087107171" duration="2835000" />
+      <workItem from="1574087107171" duration="10390000" />
     </task>
     <servers />
   </component>
@@ -252,24 +242,34 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/WEditorController.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>196</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/WEditorController.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>195</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/WEditorController.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/WEditorController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="6" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java</url>
+          <line>196</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

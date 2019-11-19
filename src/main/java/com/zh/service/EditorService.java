@@ -32,4 +32,6 @@ public interface EditorService {
     Editor getRepByIdNum(String idNumber);
 
     int getEdiNum();
+
+    Editor geEdiByName(String name);
 }

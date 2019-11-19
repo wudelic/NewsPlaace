@@ -16,10 +16,10 @@
     <!--主编用户-->
     <div class="panel-heading" style="background-color: white">
         <a href="/">用户</a>
-        › <a style="margin-left: 2%">个人资料</a>
-        | <a style="margin-left: 2%">审核过的新闻</a><!--包括不通过和通过的-->
-        | <a style="margin-left: 2%">待审核的新闻</a>
-        | <a style="margin-left: 2%">审核通过的新闻</a>
-        | <a style="margin-left: 2%">审核不通过的新闻</a>
+        › <a href="/editor/member/${sessionScope.EdiName}" style="margin-left: 2%">个人资料</a>
+        | <a href="/Edi/An" style="margin-left: 2%">审核过的新闻</a><!--包括不通过和通过的-->
+        | <a href="/Edi/Nn" style="margin-left: 2%">待审核的新闻</a>
+        | <a href="/Edi/Pn" style="margin-left: 2%">审核通过的新闻</a>
+        | <a href="/Edi/Rn" style="margin-left: 2%">审核不通过的新闻</a>
     </div>
 </c:if>

@@ -5,11 +5,15 @@ import com.github.pagehelper.PageInfo;
 import com.zh.pojo.Editor;
 import com.zh.pojo.Msg;
 import com.zh.service.EditorService;
+import com.zh.service.NewsService;
+import com.zh.service.ReporterService;
+import com.zh.service.TabService;
 import com.zh.util.ProduceMD5;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -24,6 +28,15 @@ import java.util.List;
 public class EditorController {
     @Autowired
     EditorService editorService;
+
+    @Autowired
+    ReporterService reporterService;
+
+    @Autowired
+    TabService tabService;
+
+    @Autowired
+    NewsService newsService;
 
     //ajax查找全部主编
     @RequestMapping("/query/allEditorJson")
@@ -167,5 +180,25 @@ public class EditorController {
     public String outLogin(HttpSession session){
         session.invalidate();
         return "redirect:/";
+    }
+
+    @RequestMapping("/member/{name}")
+    public ModelAndView personalCenter(@PathVariable("name")String name, HttpSession session){
+        //统计
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        //获取用户信息
+        Integer Eid = (Integer)session.getAttribute("EdiId");
+        Editor editor = editorService.getEdiById(Eid);
+
+        ModelAndView mv = new ModelAndView("user_info");
+        Editor result = editorService.geEdiByName(name);
+        Date test = (Date) result.getCreateTime();
+        mv.addObject("EdiInfo",result);
+        mv.addObject("newsNum", newsNum);
+        mv.addObject("usersNum",RNum+ENum);
+        mv.addObject("editor",editor);
+        return mv;
     }
 }

@@ -31,4 +31,6 @@ public interface EditorMapper {
     Editor selectByIdNum(String idNumber);
 
     int countEdi();
+
+    Editor selectByName(String name);
 }

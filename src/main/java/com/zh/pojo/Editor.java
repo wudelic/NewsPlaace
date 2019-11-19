@@ -3,7 +3,6 @@ package com.zh.pojo;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 public class Editor {
@@ -26,16 +25,15 @@ public class Editor {
     private String email;
 
     private String detail;
+    private Date createTime;
 
-    public Data getCreateTime() {
+    public Date getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Data createTime) {
+    public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
-
-    private Data createTime;
 
     public Integer getId() {
         return id;

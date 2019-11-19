@@ -90,4 +90,9 @@
     <select id="countEdi" resultType="java.lang.Integer">
         select count(*) from editor
     </select>
+
+    <select id="selectByName" resultType="com.zh.pojo.Editor">
+        select * from editor
+        where name=#{name}
+    </select>
 </mapper>

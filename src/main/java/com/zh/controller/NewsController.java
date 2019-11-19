@@ -157,7 +157,7 @@ public class NewsController {
      * 查询未过审核的新闻
      */
     @RequestMapping("/Rep/Nn")
-    public ModelAndView toNotpassNews(HttpSession session)
+    public ModelAndView RtoNotpassNews(HttpSession session)
     {
         int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
         List<News> news = newsService.selectNotPassNews(Rid);//根据用户id查
@@ -175,7 +175,7 @@ public class NewsController {
      * 过审核的新闻
      */
     @RequestMapping("/Rep/Pn")
-    public ModelAndView toPassNews(HttpSession session)
+    public ModelAndView RtoPassNews(HttpSession session)
     {
         int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
         List<News> news = newsService.selectPassNews(Rid);
@@ -193,7 +193,7 @@ public class NewsController {
      * 上传过的所有新闻
      */
     @RequestMapping("/Rep/An")
-    public ModelAndView toAllNews(HttpSession session){
+    public ModelAndView RtoAllNews(HttpSession session){
         int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
         List<News> news = newsService.selectAllNews(Rid);
         ModelAndView m = new ModelAndView("passNews");
@@ -210,7 +210,7 @@ public class NewsController {
      * 被拒绝的新闻
      */
     @RequestMapping("/Rep/Rn")
-    public ModelAndView toRejectNews(HttpSession session){
+    public ModelAndView RtoRejectNews(HttpSession session){
         int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
         List<News> news = newsService.selectRejectNews(Rid);
         ModelAndView m = new ModelAndView("passNews");
@@ -224,5 +224,74 @@ public class NewsController {
         return m;
     }
 
-
+    /**
+     * 主编的个人信息部分
+     */
+    @RequestMapping("/Edi/Nn")
+    public ModelAndView EtoNotpassNews(HttpSession session)
+    {
+        int Eid = (Integer) session.getAttribute("EdiId");//拿到用户id
+        List<News> news = newsService.EselectNotPassNews(Eid);//根据用户id查
+        ModelAndView m = new ModelAndView("EdiSurface");
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        m.addObject("news",news);
+        m.addObject("newsNum", newsNum);
+        m.addObject("usersNum",RNum+ENum);
+        return m;
+    }
+    /**
+     * 过审核的新闻
+     */
+    @RequestMapping("/Edi/Pn")
+    public ModelAndView EtoPassNews(HttpSession session)
+    {
+        int Eid = (Integer) session.getAttribute("EdiId");//拿到用户id
+        List<News> news = newsService.EselectPassNews(Eid);
+        ModelAndView m = new ModelAndView("EdiSurface");
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        m.addObject("news",news);
+        m.addObject("newsNum", newsNum);
+        m.addObject("usersNum",RNum+ENum);
+        return m;
+    }
+    /**
+     * 上传过的所有新闻
+     */
+    @RequestMapping("/Edi/An")
+    public ModelAndView EtoAllNews(HttpSession session){
+        int Eid = (Integer) session.getAttribute("EdiId");//拿到用户id
+        List<News> news = newsService.EselectAllNews(Eid);
+        ModelAndView m = new ModelAndView("EdiSurface");
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        m.addObject("news",news);
+        m.addObject("newsNum", newsNum);
+        m.addObject("usersNum",RNum+ENum);
+        return m;
+    }
+    /**
+     * 被拒绝的新闻
+     */
+    @RequestMapping("/Edi/Rn")
+    public ModelAndView EtoRejectNews(HttpSession session){
+        int Eid = (Integer) session.getAttribute("EdiId");//拿到用户id
+        List<News> news = newsService.EselectRejectNews(Eid);
+        ModelAndView m = new ModelAndView("EdiSurface");
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        m.addObject("news",news);
+        m.addObject("newsNum", newsNum);
+        m.addObject("usersNum",RNum+ENum);
+        return m;
+    }
 }

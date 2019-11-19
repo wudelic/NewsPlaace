@@ -40,7 +40,7 @@
     <!-- 主编已登录-->
     <div class="panel panerl-defalut" id="sidebar3" style="width: 20%;margin:1% 2% 1% 0%;float: right">
         <div class="panel-heading" style="background-color: white;text-align: center">
-            <a href="/member/${sessionScope.EdiName}">${sessionScope.EdiName}</a>
+            <a href="/editor/member/${sessionScope.EdiName}">${sessionScope.EdiName}</a>
         </div>
         <ul class="list-group" style="width: 100%">
             <li class="list-group-item"><a href="/new">查看审核列表</a></li>
