@@ -49,6 +49,7 @@
             <id column="id" property="id" jdbcType="INTEGER" />
             <result column="tabName" property="tabName" jdbcType="VARCHAR"/>
         </association>
+
     </resultMap>
     <!--主题和用户信息结果集 用于新闻详细显示-->
     <resultMap id="topicAndUserDetail" type="com.zh.pojo.News">
@@ -114,48 +115,74 @@
         select news.*,reporter.name,editor.name as Ename from news,reporter,editor
         where news.id=#{id,jdbcType=INTEGER}
         and news.reporterId=reporter.id
-        and news.editorId=editor.id
+        and (news.editorId=editor.id or news.editorId is null )
     </select>
 
-    <select id="selectNotPassNews" resultType="com.zh.pojo.News" parameterType="java.lang.Integer">
-        select * from news
+    <select id="selectNotPassNews" resultMap="topicAndUserInfo">
+        select news.*,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId=reporter.id
+        left join tab on tab.id=news.tabId
         where reporterId=#{RepId}
         and status=0
     </select>
 
-    <select id="selectPassNews" resultType="com.zh.pojo.News">
-        select * from news
-        where reporterId=#{RepId}
-        and status=1
+    <select id="selectPassNews" resultMap="topicAndUserInfo">
+        select news.*,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId=reporter.id
+        left join tab on tab.id=news.tabId
+        where status=1
+        and reporterId=#{RepId}
     </select>
 
-    <select id="selectAllNews" resultType="com.zh.pojo.News">
-        select * from news
+    <select id="selectAllNews" resultMap="topicAndUserInfo">
+        select news.*,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId=reporter.id
+        left join tab on tab.id=news.tabId
         where reporterId=#{RepId}
     </select>
 
-    <select id="selectRejectNews" resultType="com.zh.pojo.News">
-        select * from news
+    <select id="selectRejectNews" resultMap="topicAndUserInfo">
+        select news.*,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId=reporter.id
+        left join tab on tab.id=news.tabId
         where reporterId=#{RepId}
         and status=2
     </select>
 
-    <select id="EselectAllNews" resultType="com.zh.pojo.News">
-        select * from news
+    <select id="EselectAllNews" resultMap="topicAndUserInfo">
+        select news.*,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId=reporter.id
+        left join tab on tab.id=news.tabId
         where editorId = #{Eid}
     </select>
-    <select id="EselectPassNews" resultType="com.zh.pojo.News">
-        select * from news
+
+    <select id="EselectPassNews" resultMap="topicAndUserInfo">
+        select news.*,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId=reporter.id
+        left join tab on tab.id=news.tabId
         where editorId = #{Eid}
         and status=1
     </select>
-    <select id="EselectNotPassNews" resultType="com.zh.pojo.News">
-        select * from news
-        where editorId = #{Eid}
-        and status=0
+
+    <select id="EselectNotPassNews" resultMap="topicAndUserInfo">
+        select news.*,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId=reporter.id
+        left join tab on tab.id=news.tabId
+        where status=0
     </select>
-    <select id="EselectRejectNews" resultType="com.zh.pojo.News">
-        select * from news
+
+    <select id="EselectRejectNews" resultMap="topicAndUserInfo">
+        select news.*,reporter.name,tab.tabName
+        from news
+        left join reporter on news.reporterId=reporter.id
+        left join tab on tab.id=news.tabId
         where editorId = #{Eid}
         and status=2
     </select>

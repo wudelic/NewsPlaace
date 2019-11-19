@@ -60,4 +60,14 @@ public class MainController {
         S.addObject("usersNum",RNum+ENum);
         return S;
     }
+
+    @RequestMapping("/admin")
+    public ModelAndView toAdmin(){
+        ModelAndView A = new ModelAndView("admin");
+        return A;
+    }
+    @RequestMapping("*")
+    public String notFind(){
+        return "404";
+    }
 }

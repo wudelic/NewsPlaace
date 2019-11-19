@@ -127,8 +127,6 @@ public class NewsController {
         boolean ifSucc = newsService.clickAddOne(id);
         //获取主题信息
         News news = newsService.selectById(id);
-        String content = news.getContent();
-        String test = news.getTopic();
         //统计信息
         int newsNum = newsService.getNewsNum();
         int RNum = reporterService.getRepNum();
@@ -142,17 +140,6 @@ public class NewsController {
         return newsPage;
     }
 
-    /**
-     * 查找用户所有新闻
-
-    @RequestMapping("/n/{RepId}")
-    public ModelAndView toAllNews(@PathVariable("RepId")Integer RepId,HttpSession session){
-        News news = newsService.selectByRepId(RepId);
-        //统计信息
-        int newsNum = newsService.getNewsNum();
-        int RNum = reporterService.getRepNum();
-        int ENum = editorService.getEdiNum();
-    }*/
     /**
      * 查询未过审核的新闻
      */

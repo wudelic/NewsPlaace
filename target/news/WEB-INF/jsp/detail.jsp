@@ -21,12 +21,19 @@
 <div style="width: 70%;margin:1% 2% 1% 5%;float: left;">
     <div class="panel panel-default" id="main" style="">
         <div class="panel-heading" style="background-color: white">
+            <%@include file="panel.jsp"%>
             <div>
                 <div class="panel-heading" style="background-color: white">
                     <h3>${news.topic}</h3><br/>
                 </div>
                 <div>
-                    <span><strong>主编：${news.editor.name}</strong></span><br>
+                    <c:set var="aaaa">${news.editor.name}</c:set>
+                    <c:if test="${aaaa==1}">
+                        <span><strong>主编：未审核</strong></span><br>
+                    </c:if>
+                    <c:if test="${aaaa!=1}">
+                        <span><strong>主编：${news.editor.name}</strong></span><br>
+                    </c:if>
                     <a href="/member/${news.reporter.name}"><span ><strong>记者：${news.reporter.name}</strong></span></a><br>
                 </div>
             </div>
@@ -48,6 +55,8 @@
 
 <!-- 引入footer文件 -->
 <%@ include file="footer.jsp"%>
-
+<script>
+    alert(typeof (${news.editor.name}));
+</script>
 </body>
 </html>

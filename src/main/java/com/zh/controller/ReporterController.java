@@ -195,7 +195,6 @@ public class ReporterController {
 
         ModelAndView mv = new ModelAndView("user_info");
         Reporter result = reporterService.getRepByName(name);
-        Date test = (Date) result.getCreateTime();
         mv.addObject("RepInfo",result);
         mv.addObject("newsNum", newsNum);
         mv.addObject("usersNum",RNum+ENum);

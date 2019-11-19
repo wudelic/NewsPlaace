@@ -194,7 +194,6 @@ public class EditorController {
 
         ModelAndView mv = new ModelAndView("user_info");
         Editor result = editorService.geEdiByName(name);
-        Date test = (Date) result.getCreateTime();
         mv.addObject("EdiInfo",result);
         mv.addObject("newsNum", newsNum);
         mv.addObject("usersNum",RNum+ENum);

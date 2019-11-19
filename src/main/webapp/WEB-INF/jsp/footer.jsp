@@ -50,7 +50,14 @@
     <div class="container">
         这是一个新闻发布平台，你可以在这边发表你的新闻或者浏览其他的新闻，欢迎加入！
         <br/><br/><br/>
-        <p>Designed by </span> delic</p>
+        <a href="/admin"> 管理员入口</a>
+    </div>
+    <div class="info" >
+        <p style="text-align: center;font-size: 16px;">其他信息</p>
+        <ul >
+            <li><a href="/">关于本站</a></li>
+            <li><a href="/">联系我们</a></li>
+        </ul>
     </div>
     <div class="info">
         <p style="text-align: center;font-size: 16px;">统计信息</p>
@@ -60,13 +67,7 @@
         </ul>
     </div>
 
-    <div class="info" >
-        <p style="text-align: center;font-size: 16px;">其他信息</p>
-        <ul >
-            <li><a href="/">关于本站</a></li>
-            <li><a href="/">联系我们</a></li>
-        </ul>
-    </div>
+
 </footer>
 </body>
 </html>
