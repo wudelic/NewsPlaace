@@ -50,7 +50,7 @@
     <div class="container">
         这是一个新闻发布平台，你可以在这边发表你的新闻或者浏览其他的新闻，欢迎加入！
         <br/><br/><br/>
-        <a href="/admin"> 管理员入口</a>
+        <a href="/admin" target="_blank"> 管理员入口</a>
     </div>
     <div class="info" >
         <p style="text-align: center;font-size: 16px;">其他信息</p>

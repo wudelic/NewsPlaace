@@ -213,6 +213,32 @@ public class NewsController {
 
     /**
      * 主编的个人信息部分
+     * 1.审核过的新闻
+     * 2.未审核的新闻
+     * 3.审核通过的新闻
+     * 4.审核不通过的新闻
+     */
+
+    /**
+     * 审核过的新闻
+     */
+    @RequestMapping("/Edi/An")
+    public ModelAndView EtoAllNews(HttpSession session){
+        int Eid = (Integer) session.getAttribute("EdiId");//拿到用户id
+        List<News> news = newsService.EselectAllNews(Eid);
+        ModelAndView m = new ModelAndView("EdiSurface");
+        //统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        m.addObject("news",news);
+        m.addObject("newsNum", newsNum);
+        m.addObject("usersNum",RNum+ENum);
+        m.addObject("A",1);
+        return m;
+    }
+    /**
+     *未审核的新闻
      */
     @RequestMapping("/Edi/Nn")
     public ModelAndView EtoNotpassNews(HttpSession session)
@@ -227,10 +253,11 @@ public class NewsController {
         m.addObject("news",news);
         m.addObject("newsNum", newsNum);
         m.addObject("usersNum",RNum+ENum);
+        m.addObject("N",1);//页面选项
         return m;
     }
     /**
-     * 过审核的新闻
+     * 通过审核的新闻
      */
     @RequestMapping("/Edi/Pn")
     public ModelAndView EtoPassNews(HttpSession session)
@@ -245,27 +272,11 @@ public class NewsController {
         m.addObject("news",news);
         m.addObject("newsNum", newsNum);
         m.addObject("usersNum",RNum+ENum);
+        m.addObject("P",1);
         return m;
     }
     /**
-     * 上传过的所有新闻
-     */
-    @RequestMapping("/Edi/An")
-    public ModelAndView EtoAllNews(HttpSession session){
-        int Eid = (Integer) session.getAttribute("EdiId");//拿到用户id
-        List<News> news = newsService.EselectAllNews(Eid);
-        ModelAndView m = new ModelAndView("EdiSurface");
-        //统计信息
-        int newsNum = newsService.getNewsNum();
-        int RNum = reporterService.getRepNum();
-        int ENum = editorService.getEdiNum();
-        m.addObject("news",news);
-        m.addObject("newsNum", newsNum);
-        m.addObject("usersNum",RNum+ENum);
-        return m;
-    }
-    /**
-     * 被拒绝的新闻
+     * 审核不通过新闻
      */
     @RequestMapping("/Edi/Rn")
     public ModelAndView EtoRejectNews(HttpSession session){
@@ -279,6 +290,11 @@ public class NewsController {
         m.addObject("news",news);
         m.addObject("newsNum", newsNum);
         m.addObject("usersNum",RNum+ENum);
+        m.addObject("R",1);
         return m;
     }
+
+    /**
+     * 将新闻状态变成审核通过
+     */
 }

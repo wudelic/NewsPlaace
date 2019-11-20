@@ -22,23 +22,83 @@
         <%@include file="panel.jsp"%>
 
         <div class="panel-body"><ul class="list-group" style="width: 100%">
-            <c:forEach items="${news}" var="news">
-                <li class="list-group-item">
-                    <div style="height: 50px">
-                        <div style="width: 89%;float: left">
-                            <a href="/n/${news.id}">${news.topic}</a><br/>
-                            <div>
-                                <a><span class="label label-default" >${news.tab.tabName}</span></a>&nbsp;&nbsp;&nbsp;
-                                <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
+            <!--审核过的新闻视图-->
+            <c:if test="${A==1}">
+                <c:forEach items="${news}" var="news">
+                    <li class="list-group-item">
+                        <div style="height: 50px">
+                            <div style="width: 89%;float: left">
+                                <a href="/n/${news.id}">${news.topic}</a><br/>
+                                <div>
+                                    <a><span class="label label-default" >${news.tab.tabName}</span></a>&nbsp;&nbsp;&nbsp;
+                                    <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
+                                </div>
+                            </div>
+                            <div style="width: 5%;float: right;text-align: center">
+                                <span class="badge">${news.click}</span>
                             </div>
                         </div>
-                        <div style="width: 5%;float: right;text-align: center">
-                            <span class="badge">${news.click}</span>
-
+                    </li>
+                </c:forEach>
+            </c:if>
+            <!--待审核的新闻-->
+            <c:if test="${N==1}">
+                <c:forEach items="${news}" var="news">
+                    <li class="list-group-item">
+                        <div style="height: 50px">
+                            <div style="float: left">
+                                <a href="/n/${news.id}">${news.topic}</a><br/>
+                                <div>
+                                    <span class="label label-default" >${news.tab.tabName}</span>&nbsp;&nbsp;&nbsp;
+                                    <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
+                                </div>
+                            </div>
+                            <div style="float: right;">
+                                    <a>通过</a>
+                                    <a>不通过</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </c:forEach>
+                    </li>
+                </c:forEach>
+            </c:if>
+            <!--审核通过的新闻-->
+            <c:if test="${P==1}">
+                <c:forEach items="${news}" var="news">
+                    <li class="list-group-item">
+                        <div style="height: 50px">
+                            <div style="width: 89%;float: left">
+                                <a href="/n/${news.id}">${news.topic}</a><br/>
+                                <div>
+                                    <a><span class="label label-default" >${news.tab.tabName}</span></a>&nbsp;&nbsp;&nbsp;
+                                    <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
+                                </div>
+                            </div>
+                            <div style="width: 5%;float: right;text-align: center">
+                                <span class="badge">${news.click}</span>
+                            </div>
+                        </div>
+                    </li>
+                </c:forEach>
+            </c:if>
+            <!--审核不通过的新闻-->
+            <c:if test="${R==1}">
+                <c:forEach items="${news}" var="news">
+                    <li class="list-group-item">
+                        <div style="height: 50px">
+                            <div style="width: 89%;float: left">
+                                <a href="/n/${news.id}">${news.topic}</a><br/>
+                                <div>
+                                    <a><span class="label label-default" >${news.tab.tabName}</span></a>&nbsp;&nbsp;&nbsp;
+                                    <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
+                                </div>
+                            </div>
+                            <div style="width: 5%;float: right;text-align: center">
+                                <span class="badge">审核不通过</span>
+                            </div>
+                        </div>
+                    </li>
+                </c:forEach>
+            </c:if>
         </ul>
         </div>
     </div>
@@ -49,6 +109,6 @@
 
 <!-- 引入footer文件 -->
 <%@ include file="footer.jsp"%>
-
 </body>
+
 </html>

@@ -125,6 +125,8 @@
         left join tab on tab.id=news.tabId
         where reporterId=#{RepId}
         and status=0
+        order by news.id desc
+
     </select>
 
     <select id="selectPassNews" resultMap="topicAndUserInfo">
@@ -134,6 +136,8 @@
         left join tab on tab.id=news.tabId
         where status=1
         and reporterId=#{RepId}
+        order by news.id desc
+
     </select>
 
     <select id="selectAllNews" resultMap="topicAndUserInfo">
@@ -142,6 +146,8 @@
         left join reporter on news.reporterId=reporter.id
         left join tab on tab.id=news.tabId
         where reporterId=#{RepId}
+        order by news.id desc
+
     </select>
 
     <select id="selectRejectNews" resultMap="topicAndUserInfo">
@@ -151,6 +157,8 @@
         left join tab on tab.id=news.tabId
         where reporterId=#{RepId}
         and status=2
+        order by news.id desc
+
     </select>
 
     <select id="EselectAllNews" resultMap="topicAndUserInfo">
@@ -159,6 +167,8 @@
         left join reporter on news.reporterId=reporter.id
         left join tab on tab.id=news.tabId
         where editorId = #{Eid}
+        order by news.id desc
+
     </select>
 
     <select id="EselectPassNews" resultMap="topicAndUserInfo">
@@ -168,6 +178,8 @@
         left join tab on tab.id=news.tabId
         where editorId = #{Eid}
         and status=1
+        order by news.id desc
+
     </select>
 
     <select id="EselectNotPassNews" resultMap="topicAndUserInfo">
@@ -176,6 +188,7 @@
         left join reporter on news.reporterId=reporter.id
         left join tab on tab.id=news.tabId
         where status=0
+        order by news.id desc
     </select>
 
     <select id="EselectRejectNews" resultMap="topicAndUserInfo">
@@ -185,5 +198,7 @@
         left join tab on tab.id=news.tabId
         where editorId = #{Eid}
         and status=2
+        order by news.id desc
+
     </select>
 </mapper>

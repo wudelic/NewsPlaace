@@ -70,4 +70,16 @@ public class MainController {
     public String notFind(){
         return "404";
     }
+
+    @RequestMapping("/ManagementE")
+    public ModelAndView toME(){
+        ModelAndView M = new ModelAndView("ManagementE");
+        return M;
+    }
+    @RequestMapping("/ManagementR")
+    public ModelAndView toMR(){
+        ModelAndView R = new ModelAndView("ManagementR");
+        return R;
+    }
+
 }

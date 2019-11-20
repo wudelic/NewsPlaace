@@ -17,49 +17,10 @@
     <script src="<%=path %>/static/js/jquery.cityselect.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-inverse" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse">
-                <span class="sr-only">切换导航</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <img src="<%=path %>/images/admin.jpg" height="100%" />
-            </a>
-        </div>
-        <div class="collapse navbar-collapse" id="example-navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a class="icon-bar" href="#" >管理员</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a>欢迎您,${sessionScope.admin.username}</a>
-                </li>
-                <li><a href="<%=path %>/admin/outLogin">安全退出</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-
+<%@include file="adminHeader.jsp"%>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-2">
-            <button class="list-group-item active dropdown-toggle"><span claghss="glyphicon glyphicon-cog" ></span>人员管理
-            </button>
-            <div id="hide">
-                <button  class="list-group-item reporter" >
-                <span class="glyphicon glyphicon-align-left" aria-hidden="true" >
-                    </span>记者管理</button>
-                <a href="<%=path%>/WEB-INF/jsp/ManagementE.jsp" class="list-group-item editor" >
-                        <span class="glyphicon glyphicon-align-left" aria-hidden="true">
-                    </span>主编管理</a>
-            </div>
-        </div>
+        <%@include file="adminPanel.jsp"%>
         <div class="col-sm-10">
 
             <div class="panel panel-default">

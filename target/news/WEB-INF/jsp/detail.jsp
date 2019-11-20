@@ -34,7 +34,7 @@
                     <c:if test="${aaaa!=1}">
                         <span><strong>主编：${news.editor.name}</strong></span><br>
                     </c:if>
-                    <a href="/member/${news.reporter.name}"><span ><strong>记者：${news.reporter.name}</strong></span></a><br>
+                        <span ><strong>记者：${news.reporter.name}</strong></span><br>
                 </div>
             </div>
             <div style="float: right;margin-top: -100px" >
