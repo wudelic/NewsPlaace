@@ -17,9 +17,10 @@
 
     <title>管理员</title>
 </head>
+
+
 <body>
 <%@include file="adminHeader.jsp"%>
-
 
 <div class="container-fluid">
     <div class="row">
@@ -49,7 +50,7 @@
                 </div>
             </div>
             <div class="table-responsive">
-                <table class="table table-striped" id="editor_table">
+                <table style="table-layout: fixed" class="table table-striped" id="editor_table" width="100%">
                     <thead>
                     <tr>
                         <th><input type="checkbox"  id="check_all"/></th>
@@ -243,22 +244,22 @@
             })
         }
 
-                function build_editor_table(result){
+        function build_editor_table(result){
                     $("#editor_table tbody").empty();
 
                     var editor = result.extend.pageInfo.list;
                     $.each(editor,function (index, item) {
-                        var checkboxTd = $("<td><input type='checkbox' class='check_item'/></td>");
+                        var checkboxTd = $("<td style='width: 2%;'><input type='checkbox' class='check_item'/></td>");
                         var idTd = $("<td></td>").append(item.id);
-                        var passwordTd = $("<td></td>").append(item.password);
+                        var passwordTd = $("<td style='width:100%;word-break: keep-all;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;'></td>").append(item.password);
                         var nameTd = $("<td></td>").append(item.name);
                         var ageTd = $("<td></td>").append(item.age);
                         var genderTd = $("<td></td>").append(item.gender);
-                        var idNumberTd = $("<td></td>").append(item.idNumber);
+                        var idNumberTd = $("<td style='width:100%;word-break: keep-all;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;'></td>"). append(item.idNumber);
                         var addressTd = $("<td></td>").append(item.address);
                         var phoneNumTd = $("<td></td>").append(item.phoneNum);
                         var emailTd = $("<td></td>").append(item.email);
-                        var detailTd = $("<td></td>").append(item.detail);
+                        var detailTd = $("<td style='width:100%;word-break: keep-all;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;'></td>").append(item.detail);
 
                         var editBtn = $("<button></button>").addClass("btn btn-primary btn-sm edit-btn")
                             .append($("<span></span>").addClass("glyphicon glyphicon-pencil")).append("编辑");
@@ -281,7 +282,7 @@
                             .appendTo("#editor_table tbody");
                     });
                 }
-                function build_page_info(result){
+        function build_page_info(result){
                     $("#page_info_area").empty();
                     $("#page_info_area").append("当前"+result.extend.pageInfo.pageNum+"页,总"+
                         result.extend.pageInfo.pages+"页,总"+
@@ -289,7 +290,7 @@
                         currentPage = result.extend.pageInfo.pageNum;
                         total = result.extend.pageInfo.pages;
                 }
-                function build_page_nav(result){
+        function build_page_nav(result){
                     $("#page_nav_area").empty();
 
                     var ul = $("<ul></ul>").addClass("pagination");
@@ -368,7 +369,7 @@
             }
         });
 
-    $(document).on("click",".edit-btn",function(){
+        $(document).on("click",".edit-btn",function(){
             var edi_id = $(this).attr("edit_id");
             $("#saveEdiUpdate").attr("edit_id",edi_id);
             $.ajax({
@@ -388,7 +389,7 @@
             })
         });
 
-    $("#saveEdiUpdate").click(function(){
+        $("#saveEdiUpdate").click(function(){
             var edi_id = $(this).attr("edit_id");
             $.ajax({
                 url:"${path}/editor/update/" + edi_id,
@@ -404,7 +405,7 @@
                 }
             })
         });
-    $("#addEdi").click(function () {
+        $("#addEdi").click(function () {
             $.ajax({
                 url:"${path}/editor/add",
                 data:$("#addEditor form").serialize(),
@@ -419,13 +420,13 @@
                 }
             })
         });
-    $("#city").citySelect({
+        $("#city").citySelect({
             prov: "广东",
             city: "珠海",
             dist: "金湾区",
             nodata: "none",
         });
-    function test(){
+        function test(){
             var prov = $(".prov option:selected");
             var city = $(".city option:selected");
             var dist = $(".dist option:selected");
@@ -510,7 +511,6 @@
                 })
             }
         })
-
     </script>
 </body>
 </html>
