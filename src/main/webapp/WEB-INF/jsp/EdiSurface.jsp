@@ -47,6 +47,7 @@
                     <li class="list-group-item">
                         <div style="height: 50px">
                             <div style="float: left">
+                                <input type="hidden" id="newsId" value="${news.id}">
                                 <a href="/n/${news.id}">${news.topic}</a><br/>
                                 <div>
                                     <span class="label label-default" >${news.tab.tabName}</span>&nbsp;&nbsp;&nbsp;
@@ -54,8 +55,12 @@
                                 </div>
                             </div>
                             <div style="float: right;">
-                                    <a>通过</a>
-                                    <a>不通过</a>
+                                <button type="button" class="btn btn-primary" id="passbtn" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-ok" aria-hidden="true">通过</span>
+                                </button>
+                                <button type="button" class="btn btn-danger" id="unpassbtn" aria-label="Left Align">
+                                    <span class="glyphicon glyphicon-remove" aria-hidden="true">不通过</span>
+                                </button>
                             </div>
                         </div>
                     </li>
@@ -109,6 +114,43 @@
 
 <!-- 引入footer文件 -->
 <%@ include file="footer.jsp"%>
+<script>
+    <!--ajax通过-->
+    $(document).on("click","#passbtn",function(){
+        var newsTopic = $(this).parent().prev().children("a").text();
+        if(confirm("确定通过审核吗？")){
+            $.ajax({
+                url:"/news/pass",
+                type:"GET",
+                data:{newsTopic:newsTopic, Eid:${EdiId}},
+                success:function(result){
+                    alert("审核通过");
+                    location.reload();
+                },
+                error:function () {
+                    alert("审核失败");
+                }
+            })
+        }
+    });
+    $(document).on("click","#unpassbtn",function(){
+        var newsTopic = $(this).parent().prev().children("a").text();
+        if(confirm("确定不允许该新闻发布吗？")){
+            $.ajax({
+                url:"/news/unpass",
+                type:"get",
+                data:{newsTopic:newsTopic, Eid:${EdiId}},
+                success:function(result){
+                    alert("成功");
+                    location.reload();
+                },
+                error:function () {
+                    alert("失败");
+                }
+            })
+        }
+    })
+</script>
 </body>
 
 </html>

@@ -84,4 +84,14 @@ public class NewsServiceImpl implements NewsService {
     public List<News> EselectRejectNews(Integer Eid) {
         return newsMapper.EselectRejectNews(Eid);
     }
+
+    @Override
+    public void setStatusone(String newsTopic,Integer Eid) {
+        newsMapper.setStatusone(newsTopic, Eid);
+    }
+
+    @Override
+    public void setStatustwo(String newsTopic, Integer Eid) {
+        newsMapper.setStatustwo(newsTopic, Eid);
+    }
 }

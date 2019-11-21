@@ -1,5 +1,6 @@
 package com.zh.controller;
 
+import com.zh.pojo.Msg;
 import com.zh.pojo.News;
 import com.zh.pojo.Reporter;
 import com.zh.pojo.Tab;
@@ -11,9 +12,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -297,4 +296,19 @@ public class NewsController {
     /**
      * 将新闻状态变成审核通过
      */
+    @ResponseBody
+    @RequestMapping("/news/pass")
+    public Msg passNews(@RequestParam("newsTopic")String newsTopic,@RequestParam("Eid")Integer Eid){
+        newsService.setStatusone(newsTopic, Eid);
+        return Msg.success();
+    }
+    /**
+     * 不允许新闻发布
+     */
+    @ResponseBody
+    @RequestMapping("/news/unpass")
+    public Msg unpassNews(@RequestParam("newsTopic")String newsTopic,@RequestParam("Eid")Integer Eid){
+        newsService.setStatustwo(newsTopic, Eid);
+        return Msg.success();
+    }
 }

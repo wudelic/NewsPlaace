@@ -199,6 +199,14 @@
         where editorId = #{Eid}
         and status=2
         order by news.id desc
-
     </select>
+
+    <update id="setStatusone" >
+        update news set news.status=1,news.editorId=#{Eid},news.click=0
+        where news.topic=#{newsTopic}
+    </update>
+    <update id="setStatustwo">
+        update news set news.status=2,news.editorId=#{Eid},news.click=0
+        where news.topic=#{newsTopic}
+    </update>
 </mapper>

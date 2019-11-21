@@ -7,8 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/js/colResizable-1.6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/test.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/news/static/js/colResizable-1.6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/news/test.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/EditorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/NewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/mapper/NewsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/mapper/NewsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/NewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/NewsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/EdiSurface.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/EdiSurface.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ManagementE.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ManagementE.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ManagementR.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ManagementR.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/test.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mapper/EditorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/EditorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/EdiSurface.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/EdiSurface.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/ManagementE.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/ManagementE.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/ManagementR.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/ManagementR.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/test.jsp" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,11 +82,12 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\news\src\main\webapp" />
+      <recent name="D:\project\news\src\main\webapp\WEB-INF" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zh.pojo" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\project\news\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -185,12 +207,20 @@
       <workItem from="1573893625111" duration="5555000" />
       <workItem from="1573918762315" duration="7769000" />
       <workItem from="1573995407669" duration="12890000" />
-      <workItem from="1574087107171" duration="33562000" />
+      <workItem from="1574087107171" duration="46368000" />
+      <workItem from="1574302221905" duration="6381000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_WIDTH">
+      <map>
+        <entry key="3" value="143" />
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

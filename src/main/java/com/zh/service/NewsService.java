@@ -48,4 +48,8 @@ public interface NewsService {
     List<News> EselectAllNews(Integer Eid);
 
     List<News> EselectRejectNews(Integer Eid);
+
+    void setStatusone(String newsTopic,Integer Eid);
+
+    void setStatustwo(String newsTopic, Integer Eid);
 }

@@ -7,6 +7,25 @@
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<style type="text/css">
+    table{
+        width:100%;
+        border-collapse: collapse;
+        table-layout:fixed;/* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
+        border:1px solid;
+
+    }
+    td{
+        border:1px solid;
+        overflow:hidden;		/* 内容超出宽度时隐藏超出部分的内容 */
+        white-space:nowrap;		/* 不换行 */
+        text-overflow:ellipsis;	/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用*/
+
+    }
+    th{
+        border:1px solid;
+    }
+</style>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="${path}/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,11 +33,10 @@
     <script src="<%=path %>/static/js/bootstrap.js"></script>
     <script src="<%=path %>/static/js/Editor.js"></script>
     <script src="<%=path %>/static/js/jquery.cityselect.js"></script>
+    <script src = "/static/js/colResizable-1.6.js" ></script>
 
     <title>管理员</title>
 </head>
-
-
 <body>
 <%@include file="adminHeader.jsp"%>
 
@@ -50,7 +68,7 @@
                 </div>
             </div>
             <div class="table-responsive">
-                <table style="table-layout: fixed" class="table table-striped" id="editor_table" width="100%">
+                <table style="table-layout: fixed" class="table table-striped" id="editor_table">
                     <thead>
                     <tr>
                         <th><input type="checkbox"  id="check_all"/></th>
@@ -249,17 +267,17 @@
 
                     var editor = result.extend.pageInfo.list;
                     $.each(editor,function (index, item) {
-                        var checkboxTd = $("<td style='width: 2%;'><input type='checkbox' class='check_item'/></td>");
+                        var checkboxTd = $("<td><input type='checkbox' class='check_item'/></td>");
                         var idTd = $("<td></td>").append(item.id);
-                        var passwordTd = $("<td style='width:100%;word-break: keep-all;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;'></td>").append(item.password);
+                        var passwordTd = $("<td></td>").addClass("pwdLength").append(item.password);
                         var nameTd = $("<td></td>").append(item.name);
                         var ageTd = $("<td></td>").append(item.age);
                         var genderTd = $("<td></td>").append(item.gender);
-                        var idNumberTd = $("<td style='width:100%;word-break: keep-all;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;'></td>"). append(item.idNumber);
+                        var idNumberTd = $("<td></td>").append(item.idNumber);
                         var addressTd = $("<td></td>").append(item.address);
                         var phoneNumTd = $("<td></td>").append(item.phoneNum);
                         var emailTd = $("<td></td>").append(item.email);
-                        var detailTd = $("<td style='width:100%;word-break: keep-all;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;'></td>").append(item.detail);
+                        var detailTd = $("<td></td>").append(item.detail);
 
                         var editBtn = $("<button></button>").addClass("btn btn-primary btn-sm edit-btn")
                             .append($("<span></span>").addClass("glyphicon glyphicon-pencil")).append("编辑");
@@ -511,6 +529,13 @@
                 })
             }
         })
+        $(function(){
+//此处实现表格可拖放属性
+            $("#editor_table").colResizable({
+                liveDrag:true,//实现实时拖动，可看见拖动轨迹
+                draggingClass:"dragging", //防止拖动出险虚标线
+            });
+        });
     </script>
 </body>
 </html>

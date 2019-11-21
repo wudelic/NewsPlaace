@@ -1,6 +1,7 @@
 package com.zh.mapper;
 
 import com.zh.pojo.News;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -32,4 +33,8 @@ public interface NewsMapper {
     List<News> EselectAllNews(Integer eid);
 
     List<News> EselectRejectNews(Integer eid);
+
+    void setStatusone(@Param("newsTopic") String newsTopic, @Param("Eid") Integer Eid);
+
+    void setStatustwo(@Param("newsTopic") String newsTopic, @Param("Eid") Integer eid);
 }

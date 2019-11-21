@@ -7,6 +7,25 @@
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+<style type="text/css">
+    table{
+        width:100%;
+        border-collapse: collapse;
+        table-layout:fixed;/* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
+        border:1px solid;
+
+    }
+    td{
+        border:1px solid;
+        overflow:hidden;		/* 内容超出宽度时隐藏超出部分的内容 */
+        white-space:nowrap;		/* 不换行 */
+        text-overflow:ellipsis;	/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用*/
+
+    }
+    th{
+        border:1px solid;
+    }
+</style>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>管理员</title>
@@ -15,6 +34,7 @@
     <script src="<%=path %>/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="<%=path %>/static/js/Reporter.js"></script>
     <script src="<%=path %>/static/js/jquery.cityselect.js"></script>
+    <script src = "/static/js/colResizable-1.6.js" ></script>
 </head>
 <body>
 <%@include file="adminHeader.jsp"%>
@@ -512,7 +532,13 @@
             })
         }
     })
-
+    $(function(){
+//此处实现表格可拖放属性
+        $("#reporter_table").colResizable({
+            liveDrag:true,//实现实时拖动，可看见拖动轨迹
+            draggingClass:"dragging", //防止拖动出险虚标线
+        });
+    });
 
 </script>
 </body>

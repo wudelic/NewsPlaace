@@ -55,8 +55,5 @@
 
 <!-- 引入footer文件 -->
 <%@ include file="footer.jsp"%>
-<script>
-    alert(typeof (${news.editor.name}));
-</script>
 </body>
 </html>
