@@ -20,9 +20,9 @@
 <div style="width: 70%;margin:1% 2% 1% 5%;float: left;">
     <div class="panel panel-default" id="main" style="">
         <%@include file="panel.jsp"%>
-
         <div class="panel-body"><ul class="list-group" style="width: 100%">
             <!--审核过的新闻视图-->
+
             <c:if test="${A==1}">
                 <c:forEach items="${news}" var="news">
                     <li class="list-group-item">
@@ -30,12 +30,12 @@
                             <div style="width: 89%;float: left">
                                 <a href="/n/${news.id}">${news.topic}</a><br/>
                                 <div>
-                                    <a><span class="label label-default" >${news.tab.tabName}</span></a>&nbsp;&nbsp;&nbsp;
+                                    <span class="label label-default" >${news.tab.tabName}</span>
                                     <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
                                 </div>
                             </div>
-                            <div style="width: 5%;float: right;text-align: center">
-                                <span class="badge">${news.click}</span>
+                            <div style="width: 13%;float: right;text-align: center">
+                                <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>点击量：${news.click}
                             </div>
                         </div>
                     </li>
@@ -47,7 +47,6 @@
                     <li class="list-group-item">
                         <div style="height: 50px">
                             <div style="float: left">
-                                <input type="hidden" id="newsId" value="${news.id}">
                                 <a href="/n/${news.id}">${news.topic}</a><br/>
                                 <div>
                                     <span class="label label-default" >${news.tab.tabName}</span>&nbsp;&nbsp;&nbsp;
@@ -78,8 +77,8 @@
                                     <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
                                 </div>
                             </div>
-                            <div style="width: 5%;float: right;text-align: center">
-                                <span class="badge">${news.click}</span>
+                            <div style="width: 10%;float: right;text-align: center">
+                                通过审核
                             </div>
                         </div>
                     </li>
@@ -97,8 +96,8 @@
                                     <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
                                 </div>
                             </div>
-                            <div style="width: 5%;float: right;text-align: center">
-                                <span class="badge">审核不通过</span>
+                            <div style="width: 10%;float: right;text-align: center">
+                                审核不通过
                             </div>
                         </div>
                     </li>

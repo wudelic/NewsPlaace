@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String path = request.getContextPath();
@@ -26,6 +25,7 @@
                 <div class="panel-heading" style="background-color: white">
                     <h3>${news.topic}</h3><br/>
                 </div>
+               <!-- 待修改
                 <div>
                     <c:set var="aaaa">${news.editor.name}</c:set>
                     <c:if test="${aaaa==1}">
@@ -36,6 +36,7 @@
                     </c:if>
                         <span ><strong>记者：${news.reporter.name}</strong></span><br>
                 </div>
+                -->
             </div>
             <div style="float: right;margin-top: -100px" >
                 <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate><br>

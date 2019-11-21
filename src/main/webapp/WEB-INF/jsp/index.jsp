@@ -72,9 +72,8 @@
                     <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
                 </div>
             </div>
-            <div style="width: 5%;float: right;text-align: center">
-                <span class="badge">${news.click}</span>
-
+            <div style="width: 13%;float: right;text-align: center">
+                <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>点击量：${news.click}
             </div>
         </div>
     </li>
