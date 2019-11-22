@@ -22,7 +22,6 @@
         <%@include file="panel.jsp"%>
         <div class="panel-body"><ul class="list-group" style="width: 100%">
             <!--审核过的新闻视图-->
-
             <c:if test="${A==1}">
                 <c:forEach items="${news}" var="news">
                     <li class="list-group-item">

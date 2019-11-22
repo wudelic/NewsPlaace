@@ -94,4 +94,9 @@ public class NewsServiceImpl implements NewsService {
     public void setStatustwo(String newsTopic, Integer Eid) {
         newsMapper.setStatustwo(newsTopic, Eid);
     }
+
+    @Override
+    public void deleteNewsByTopic(String newsTopic) {
+        newsMapper.deleteNewsByTopic(newsTopic);
+    }
 }

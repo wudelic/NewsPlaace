@@ -147,7 +147,7 @@ public class NewsController {
     {
         int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
         List<News> news = newsService.selectNotPassNews(Rid);//根据用户id查
-        ModelAndView m = new ModelAndView("NotpassNews");
+        ModelAndView m = new ModelAndView("RepSurface");
         //统计信息
         int newsNum = newsService.getNewsNum();
         int RNum = reporterService.getRepNum();
@@ -155,6 +155,7 @@ public class NewsController {
         m.addObject("news",news);
         m.addObject("newsNum", newsNum);
         m.addObject("usersNum",RNum+ENum);
+        m.addObject("N",1);
         return m;
     }
     /**
@@ -165,7 +166,7 @@ public class NewsController {
     {
         int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
         List<News> news = newsService.selectPassNews(Rid);
-        ModelAndView m = new ModelAndView("passNews");
+        ModelAndView m = new ModelAndView("RepSurface");
         //统计信息
         int newsNum = newsService.getNewsNum();
         int RNum = reporterService.getRepNum();
@@ -173,6 +174,7 @@ public class NewsController {
         m.addObject("news",news);
         m.addObject("newsNum", newsNum);
         m.addObject("usersNum",RNum+ENum);
+        m.addObject("P",1);
         return m;
     }
     /**
@@ -182,7 +184,7 @@ public class NewsController {
     public ModelAndView RtoAllNews(HttpSession session){
         int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
         List<News> news = newsService.selectAllNews(Rid);
-        ModelAndView m = new ModelAndView("passNews");
+        ModelAndView m = new ModelAndView("RepSurface");
         //统计信息
         int newsNum = newsService.getNewsNum();
         int RNum = reporterService.getRepNum();
@@ -190,6 +192,7 @@ public class NewsController {
         m.addObject("news",news);
         m.addObject("newsNum", newsNum);
         m.addObject("usersNum",RNum+ENum);
+        m.addObject("A",1);
         return m;
     }
     /**
@@ -199,7 +202,7 @@ public class NewsController {
     public ModelAndView RtoRejectNews(HttpSession session){
         int Rid = (Integer) session.getAttribute("RepId");//拿到用户id
         List<News> news = newsService.selectRejectNews(Rid);
-        ModelAndView m = new ModelAndView("passNews");
+        ModelAndView m = new ModelAndView("RepSurface");
         //统计信息
         int newsNum = newsService.getNewsNum();
         int RNum = reporterService.getRepNum();
@@ -207,6 +210,7 @@ public class NewsController {
         m.addObject("news",news);
         m.addObject("newsNum", newsNum);
         m.addObject("usersNum",RNum+ENum);
+        m.addObject("R", 1);
         return m;
     }
 
@@ -308,6 +312,15 @@ public class NewsController {
     @RequestMapping("/news/unpass")
     public Msg unpassNews(@RequestParam("newsTopic")String newsTopic,@RequestParam("Eid")Integer Eid){
         newsService.setStatustwo(newsTopic, Eid);
+        return Msg.success();
+    }
+    /**
+     * 删除新闻
+     */
+    @ResponseBody
+    @RequestMapping("/news/delete")
+    public Msg deleteNews(@RequestParam("newsTopic")String newsTopic){
+        newsService.deleteNewsByTopic(newsTopic);
         return Msg.success();
     }
 }

@@ -37,4 +37,6 @@ public interface NewsMapper {
     void setStatusone(@Param("newsTopic") String newsTopic, @Param("Eid") Integer Eid);
 
     void setStatustwo(@Param("newsTopic") String newsTopic, @Param("Eid") Integer eid);
+
+    void deleteNewsByTopic(String newsTopic);
 }

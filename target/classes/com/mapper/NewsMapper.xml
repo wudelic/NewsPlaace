@@ -209,4 +209,8 @@
         update news set news.status=2,news.editorId=#{Eid},news.click=0
         where news.topic=#{newsTopic}
     </update>
+    <delete id="deleteNewsByTopic" parameterType="java.lang.String">
+        delete from news
+        where news.topic=#{newsTopic}
+    </delete>
 </mapper>

@@ -20,22 +20,53 @@
 <div style="width: 70%;margin:1% 2% 1% 5%;float: left;">
     <div class="panel panel-default" id="main" style="">
         <%@include file="panel.jsp"%>
+
         <div class="panel-body"><ul class="list-group" style="width: 100%">
-            <!--审核过的新闻视图-->
+
+            <!--所有发布的新闻视图-->
             <c:if test="${A==1}">
                 <c:forEach items="${news}" var="news">
                     <li class="list-group-item">
                         <div style="height: 50px">
-                            <div style="width: 89%;float: left">
+                            <div style="width: 75%;float: left">
                                 <a href="/n/${news.id}">${news.topic}</a><br/>
                                 <div>
                                     <span class="label label-default" >${news.tab.tabName}</span>
                                     <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate>
                                 </div>
                             </div>
-                            <div style="width: 13%;float: right;text-align: center">
-                                <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>点击量：${news.click}
-                            </div>
+                            <c:if test="${news.status==1}">
+                                <div style="width: 15%;float: left;">
+                                    <span>通过审核</span><br>
+                                    <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>点击量：${news.click}
+                                   <div style="width: 5%;float: right">
+                                       <button type="button" class="btn btn-danger deletebtn" aria-label="Left Align">
+                                           <span class="glyphicon glyphicon-trash" aria-hidden="true">删除</span>
+                                       </button>
+                                   </div>
+                                </div>
+                            </c:if>
+                            <c:if test="${news.status==0}">
+                                <div style="width: 15%;float: left;">
+                                    <span>审核中</span><br>
+                                    <div style="width: 5%;float: right">
+                                        <button type="button" class="btn btn-danger deletebtn" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon-trash" aria-hidden="true">删除</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </c:if>
+                            <c:if test="${news.status==2}">
+                                <div style="width: 15%;float: left;">
+                                    <span>审核未通过</span><br>
+                                    <div style="width: 5%;float: right">
+                                        <button type="button" class="btn btn-danger deletebtn" aria-label="Left Align">
+                                            <span class="glyphicon glyphicon-trash" aria-hidden="true">删除</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </c:if>
+
                         </div>
                     </li>
                 </c:forEach>
@@ -53,12 +84,7 @@
                                 </div>
                             </div>
                             <div style="float: right;">
-                                <button type="button" class="btn btn-primary" id="passbtn" aria-label="Left Align">
-                                    <span class="glyphicon glyphicon-ok" aria-hidden="true">通过</span>
-                                </button>
-                                <button type="button" class="btn btn-danger" id="unpassbtn" aria-label="Left Align">
-                                    <span class="glyphicon glyphicon-remove" aria-hidden="true">不通过</span>
-                                </button>
+                                <span>审核中</span>
                             </div>
                         </div>
                     </li>
@@ -113,42 +139,23 @@
 <!-- 引入footer文件 -->
 <%@ include file="footer.jsp"%>
 <script>
-    <!--ajax通过-->
-    $(document).on("click","#passbtn",function(){
-        var newsTopic = $(this).parent().prev().children("a").text();
-        if(confirm("确定通过审核吗？")){
+    $(document).on("click",".deletebtn",function(){
+        var newsTopic = $(this).parent().parent().prev().children("a").text();
+        if (confirm("确定要删除该新闻吗？")){
             $.ajax({
-                url:"/news/pass",
-                type:"GET",
-                data:{newsTopic:newsTopic, Eid:${EdiId}},
-                success:function(result){
-                    alert("审核通过");
-                    location.reload();
-                },
-                error:function () {
-                    alert("审核失败");
-                }
-            })
-        }
-    });
-    $(document).on("click","#unpassbtn",function(){
-        var newsTopic = $(this).parent().prev().children("a").text();
-        if(confirm("确定不允许该新闻发布吗？")){
-            $.ajax({
-                url:"/news/unpass",
+                url:"/news/delete",
                 type:"get",
-                data:{newsTopic:newsTopic, Eid:${EdiId}},
-                success:function(result){
-                    alert("成功");
+                data:{newsTopic:newsTopic},
+                success:function (result) {
+                    alert("删除成功");
                     location.reload();
                 },
-                error:function () {
-                    alert("失败");
+                error:function(){
+                    alert("删除失败");
                 }
             })
         }
     })
 </script>
 </body>
-
 </html>
