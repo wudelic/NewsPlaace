@@ -216,6 +216,20 @@
 
     <select id="getByTopic" parameterType="java.lang.String" resultType="java.lang.String">
         select topic from news
-        where topic like concat('%',#{newsTopic},'%') limit 0,5
+        where status=1
+        and topic like concat('%',#{newsTopic},'%') limit 0,5
+
+    </select>
+    <update id="clickAddOneByTopic" parameterType="java.lang.String">
+        update news
+        set
+        click = click+1
+        where topic=#{newsTopic}
+    </update>
+    <select id="selectByTopic" parameterType="java.lang.String" resultMap="topicAndUserDetail">
+        select news.*,reporter.name,editor.name as Ename from news,reporter,editor
+        where news.topic=#{newsTopic}
+        and news.reporterId=reporter.id
+        and (news.editorId=editor.id or news.editorId is null )
     </select>
 </mapper>

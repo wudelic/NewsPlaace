@@ -42,7 +42,6 @@ public class NewsServiceImpl implements NewsService {
     public News selectById(Integer id) {
         News news = newsMapper.selectById(id);
         return news;
-
     }
 
     @Override
@@ -103,5 +102,16 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public List<String> getByTopic(String newsTopic) {
         return newsMapper.getByTopic(newsTopic);
+    }
+
+    @Override
+    public boolean clickAddOneByTopic(String newsTopic) {
+        return newsMapper.clickAddOneByTopic(newsTopic)>0;
+    }
+
+    @Override
+    public News selectByTopic(String newsTopic) {
+        News news = newsMapper.selectByTopic(newsTopic);
+        return news;
     }
 }

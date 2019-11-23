@@ -56,4 +56,8 @@ public interface NewsService {
     void deleteNewsByTopic(String newsTopic);
 
     List<String> getByTopic(String newsTopic);
+
+    boolean clickAddOneByTopic(String newsTopic);
+
+    News selectByTopic(String newsTopic);
 }

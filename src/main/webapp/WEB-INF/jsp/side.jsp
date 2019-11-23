@@ -10,7 +10,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control NTopic topic" placeholder="输入想看的新闻">
                     <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">搜索</button>
+                    <button class="btn btn-default searchByTopic" type="button">搜索</button>
                     </span>
                 </div>
                 <div class="searchBox" style="position: absolute;z-index: 9999; background: #ffffff; width: 167.6px; border: 1px solid #ccc; display: none" >
@@ -66,6 +66,14 @@
 
 
 <script>
+    $(".searchByTopic").click(function(){
+        var newsTopic = $(".topic").val();
+        if (newsTopic == ""){
+            alert("搜索不能为空");
+            return false;
+        }
+        window.location.href="/n/newsTopic/"+ newsTopic;
+    })
     function overFn(obj){
         $(obj).css("background", "#DBEAF9")
     }

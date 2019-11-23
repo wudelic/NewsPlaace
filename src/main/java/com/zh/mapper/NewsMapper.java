@@ -41,4 +41,8 @@ public interface NewsMapper {
     void deleteNewsByTopic(String newsTopic);
 
     List<String> getByTopic(String newsTopic);
+
+    int clickAddOneByTopic(String newsTopic);
+
+    News selectByTopic(String newsTopic);
 }
