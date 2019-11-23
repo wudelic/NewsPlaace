@@ -1,5 +1,7 @@
 package com.zh.controller;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.zh.pojo.Msg;
 import com.zh.pojo.News;
 import com.zh.pojo.Reporter;
@@ -38,7 +40,7 @@ public class NewsController {
     TabService tabService;
     //log4j对象
     private final Log log = LogFactory.getLog(getClass());
-
+/*
     @RequestMapping(value = "/")
     public ModelAndView toMain(HttpSession session){
         ModelAndView indexPage = new ModelAndView("index");
@@ -50,13 +52,30 @@ public class NewsController {
         int ENum = editorService.getEdiNum();
         //获取用户信息
         Integer Rid = (Integer)session.getAttribute("RepId");
-      //  Reporter reporter = reporterService.getRepById(Rid);
-
         indexPage.addObject("news",news);
         indexPage.addObject("newsNum", newsNum);
         indexPage.addObject("usersNum",RNum+ENum);
+        return indexPage;
+    }
+*/
+    @RequestMapping(value = "/")
+    public ModelAndView toMain(@RequestParam(defaultValue = "1",value = "pn")Integer pn, HttpSession session){
+        ModelAndView indexPage = new ModelAndView("index");
+        PageHelper.startPage(pn,8);
+        //全部新闻
+        List<News> list = newsService.listTopicsAndUsers();
+        PageInfo<News> pageInfo = new PageInfo<>(list);
+        //获取统计信息
+        int newsNum = newsService.getNewsNum();
+        int RNum = reporterService.getRepNum();
+        int ENum = editorService.getEdiNum();
+        //获取用户信息
+        Integer Rid = (Integer)session.getAttribute("RepId");
+        indexPage.addObject("pageInfo",pageInfo);
+        indexPage.addObject("news",list);
+        indexPage.addObject("newsNum", newsNum);
+        indexPage.addObject("usersNum",RNum+ENum);
 
-     //   indexPage.addObject("reporter", reporter);
         return indexPage;
     }
 

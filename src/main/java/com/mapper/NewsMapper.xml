@@ -82,6 +82,7 @@
         from news
         left join reporter on news.reporterId = reporter.id
         left join tab on tab.id = news.tabId
+        where news.status=1
         group by news.id order by news.id desc
     </select>
 
