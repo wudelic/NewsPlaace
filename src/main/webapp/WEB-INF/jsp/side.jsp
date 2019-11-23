@@ -37,10 +37,13 @@
         <ul class="list-group" style="width: 100%">
             <li class="list-group-item"><a href="/new">写新闻</a></li>
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="输入想看的新闻">
+                <input type="text" class="form-control NTopic topic" placeholder="输入想看的新闻">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">搜索</button>
+                    <button class="btn btn-default searchByTopic" type="button">搜索</button>
                     </span>
+            </div>
+            <div class="searchBox" style="position: absolute;z-index: 9999; background: #ffffff; width: 167.6px; border: 1px solid #ccc; display: none" >
+
             </div>
         </ul>
     </div>
@@ -57,8 +60,11 @@
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="输入想看的新闻">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">搜索</button>
+                    <button class="btn btn-default searchByTopic" type="button">搜索</button>
                     </span>
+            </div>
+            <div class="searchBox" style="position: absolute;z-index: 9999; background: #ffffff; width: 167.6px; border: 1px solid #ccc; display: none" >
+
             </div>
         </ul>
     </div>
@@ -108,5 +114,6 @@
             }
         })
     })
+
 </script>
 

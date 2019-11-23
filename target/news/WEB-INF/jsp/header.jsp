@@ -8,7 +8,7 @@
     <script src="<%=Rpath %>/static/js/Reporter.js"></script>
     <script src="<%=Rpath %>/static/js/jquery.cityselect.js"></script>
 </head>
-<body>
+<body onkeydown="keyLogin()">
 <header>
     <nav class="navbar navbar-default" role="navigation" style="background-color: white">
         <div class="container-fluid" style="margin-left: 10%">
@@ -242,4 +242,11 @@
         var address = prov.val()+city.val()+dist.val();
         $("#address").val(address);
     }
+
+    function keyLogin(){
+        if(event.keyCode==13){
+            document.getElementById("loginButton").click();
+        }
+    }
+
 </script>

@@ -25,18 +25,12 @@
                 <div class="panel-heading" style="background-color: white">
                     <h3>${news.topic}</h3><br/>
                 </div>
-               <!-- 待修改
+
                 <div>
-                    <c:set var="aaaa">${news.editor.name}</c:set>
-                    <c:if test="${aaaa==1}">
-                        <span><strong>主编：未审核</strong></span><br>
-                    </c:if>
-                    <c:if test="${aaaa!=1}">
+
                         <span><strong>主编：${news.editor.name}</strong></span><br>
-                    </c:if>
                         <span ><strong>记者：${news.reporter.name}</strong></span><br>
                 </div>
-                -->
             </div>
             <div style="float: right;margin-top: -100px" >
                 <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate><br>
