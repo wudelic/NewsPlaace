@@ -51,7 +51,7 @@
                 <div class="panel-body">
                     <form  role="form" class="form-inline"><!--处理-->
                         <div class="form-group">
-                            <input type="text" class="form-control SearchIdN"  name="idNumber" placeholder="请输入证件号" id="idN">
+                            <input type="text" autocomplete="off" style="width: 170px" class="form-control SearchIdN"  name="idNumber" placeholder="请输入证件号" id="idN">
                             <div id="searchBox" style="position:absolute; z-index:9999; background:#ffffff; width: 170px; border: 1px solid #ccc;display: none">
 
                             </div>
@@ -530,7 +530,7 @@
             }
         })
         $(function(){
-//此处实现表格可拖放属性
+            //此处实现表格可拖放属性
             $("#editor_table").colResizable({
                 liveDrag:true,//实现实时拖动，可看见拖动轨迹
                 draggingClass:"dragging", //防止拖动出险虚标线

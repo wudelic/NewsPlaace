@@ -213,4 +213,9 @@
         delete from news
         where news.topic=#{newsTopic}
     </delete>
+
+    <select id="getByTopic" parameterType="java.lang.String" resultType="java.lang.String">
+        select topic from news
+        where topic like concat('%',#{newsTopic},'%') limit 0,5
+    </select>
 </mapper>

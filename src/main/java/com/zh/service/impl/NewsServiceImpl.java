@@ -99,4 +99,9 @@ public class NewsServiceImpl implements NewsService {
     public void deleteNewsByTopic(String newsTopic) {
         newsMapper.deleteNewsByTopic(newsTopic);
     }
+
+    @Override
+    public List<String> getByTopic(String newsTopic) {
+        return newsMapper.getByTopic(newsTopic);
+    }
 }

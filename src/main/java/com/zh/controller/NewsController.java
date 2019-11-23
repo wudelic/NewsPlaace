@@ -323,4 +323,13 @@ public class NewsController {
         newsService.deleteNewsByTopic(newsTopic);
         return Msg.success();
     }
+    /**
+     * 查找新闻ajax
+     */
+    @RequestMapping("/news/getByTopic")
+    @ResponseBody
+    public List<String> getByTopic(@RequestParam("newsTopic")String newsTopic){
+        List<String> NewsList = newsService.getByTopic(newsTopic);
+        return NewsList;
+    }
 }

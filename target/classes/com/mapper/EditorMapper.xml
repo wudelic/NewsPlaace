@@ -74,7 +74,7 @@
     </update>
     <select id="getIdNum" parameterType="java.lang.String" resultType="java.lang.String">
         select idNumber from editor
-        where idNumber LIKE concat('%',#{idNumber},'%') limit 0,4
+        where idNumber LIKE concat('%',#{idNumber},'%') limit 0,5
     </select>
     <delete id="deleteByIds" parameterType="java.lang.String">
         delete from editor where id in

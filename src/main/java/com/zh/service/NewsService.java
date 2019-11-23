@@ -54,4 +54,6 @@ public interface NewsService {
     void setStatustwo(String newsTopic, Integer Eid);
 
     void deleteNewsByTopic(String newsTopic);
+
+    List<String> getByTopic(String newsTopic);
 }
