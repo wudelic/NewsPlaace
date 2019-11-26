@@ -75,7 +75,6 @@ public class NewsController {
         indexPage.addObject("news",list);
         indexPage.addObject("newsNum", newsNum);
         indexPage.addObject("usersNum",RNum+ENum);
-
         return indexPage;
     }
 
@@ -107,7 +106,7 @@ public class NewsController {
                 log.info("新建新闻成功！");
             }
         }
-        indexPage = new ModelAndView("redirect:/");
+        indexPage = new ModelAndView("redirect:/Rep/An");
         return indexPage;
     }
     /**

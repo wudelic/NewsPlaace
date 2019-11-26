@@ -20,14 +20,12 @@
 <div style="width: 70%;margin:1% 2% 1% 5%;float: left;">
     <div class="panel panel-default" id="main" style="">
         <div class="panel-heading" style="background-color: white">
-            <%@include file="panel.jsp"%>
             <div>
+                <a href="#" onClick="javascript :history.back(-1);">返回上一页</a>
                 <div class="panel-heading" style="background-color: white">
                     <h3>${news.topic}</h3><br/>
                 </div>
-
                 <div>
-
                         <span><strong>主编：${news.editor.name}</strong></span><br>
                         <span ><strong>记者：${news.reporter.name}</strong></span><br>
                 </div>

@@ -3,7 +3,7 @@
 <c:if test="${!empty RepId}">
     <!--记者用户-->
 <div class="panel-heading" style="background-color: white">
-    <a href="/">用户</a>
+    <a href="/reporter/member/${sessionScope.RepName}">用户</a>
     › <a href="/reporter/member/${sessionScope.RepName}" style="margin-left: 2%">个人资料</a>
     | <a href="/Rep/An" style="margin-left: 2%">所有新闻</a>
     | <a href="/Rep/Pn" style="margin-left: 2%">过审核的新闻</a>
@@ -15,7 +15,7 @@
 <c:if test="${!empty EdiId}">
     <!--主编用户-->
     <div class="panel-heading" style="background-color: white">
-        <a href="/">用户</a>
+        <a href="/editor/member/${sessionScope.EdiName}">用户</a>
         › <a href="/editor/member/${sessionScope.EdiName}" style="margin-left: 2%">个人资料</a>
         | <a href="/Edi/An" style="margin-left: 2%">审核过的新闻</a><!--包括不通过和通过的-->
         | <a href="/Edi/Nn" style="margin-left: 2%">待审核的新闻</a>

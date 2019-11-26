@@ -44,7 +44,7 @@
             <c:if test="${N==1}">
                 <c:forEach items="${news}" var="news">
                     <li class="list-group-item">
-                        <div style="height: 50px">
+                        <div style="height: 65px">
                             <div style="float: left">
                                 <a href="/n/${news.id}">${news.topic}</a><br/>
                                 <div>

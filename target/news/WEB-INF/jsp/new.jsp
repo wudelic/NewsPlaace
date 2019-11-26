@@ -21,7 +21,7 @@
             <a href="/">News</a> › 发布新闻
         </div>
         <div class="panel-body">
-            <form action="/news/add" method="post" id="replyForm">
+            <form action="/news/add" method="post" id="replyForm" >
                 <div class="form-group">
                     <label for="tab">发布板块</label><br/>
                     <div class="col-sm-10" style="width: 15%">
@@ -34,15 +34,14 @@
                 </div><br/>
                 <div class="form-group">
                     <label for="topic">新闻标题</label>
-                    <input type="text" class="form-control" id="topic" name="topic" placeholder="请输入主题标题" required="required">
+                    <input type="text" class="form-control" id="topic" name="topic" placeholder="请输入主题标题" >
+                    <span id="topicInfo" />
                 </div>
                 <div id="editor">
                     <p>请输入新闻内容</p>
                 </div>
-
                 <input class="input-xlarge focused hidden" name="content" type="text" id="information" >
-
-                <br><input type="submit" class="btn btn-default btn-sm" id="submitbtn" value="发布新闻">
+                <br><input type="submit" class="btn btn-default btn-sm" id="submitbtn" value="发布新闻" onclick="return check();">
             </form>
         </div>
     </div>
@@ -83,12 +82,24 @@
     }
     editor.create();
 
-    $("#submitbtn").click(function(){
-        var info = editor.txt.html();
-        document.getElementById("information").value = info;
-        alert(info);
-    })
+    function check(){
+        var topic = $("#topic").val();
+        if (topic == ""){
+            $("#topic").css("border-color", "red");
+            $("#topicInfo").html("标题不能为空");
+            return false;
+        }
+        if (topic != ""){
+            $("#topic").css("border-color", "green");
+            $("#topicInfo").html("");
+            if(confirm("确定上传该新闻吗？")){
+                var info = editor.txt.html();
+                document.getElementById("information").value = info;
+            }
+        }
 
+
+    }
 </script>
 </body>
 </html>
