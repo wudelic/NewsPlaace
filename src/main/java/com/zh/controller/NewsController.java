@@ -40,24 +40,7 @@ public class NewsController {
     TabService tabService;
     //log4j对象
     private final Log log = LogFactory.getLog(getClass());
-/*
-    @RequestMapping(value = "/")
-    public ModelAndView toMain(HttpSession session){
-        ModelAndView indexPage = new ModelAndView("index");
-        //全部新闻
-        List<News> news = newsService.listTopicsAndUsers();
-        //获取统计信息
-        int newsNum = newsService.getNewsNum();
-        int RNum = reporterService.getRepNum();
-        int ENum = editorService.getEdiNum();
-        //获取用户信息
-        Integer Rid = (Integer)session.getAttribute("RepId");
-        indexPage.addObject("news",news);
-        indexPage.addObject("newsNum", newsNum);
-        indexPage.addObject("usersNum",RNum+ENum);
-        return indexPage;
-    }
-*/
+
     @RequestMapping(value = "/")
     public ModelAndView toMain(@RequestParam(defaultValue = "1",value = "pn")Integer pn, HttpSession session){
         ModelAndView indexPage = new ModelAndView("index");
@@ -113,7 +96,7 @@ public class NewsController {
      * 指定渲染板块页面
      */
     @RequestMapping("/tab/{tabNameEn}")
-    public ModelAndView toTabPage(@PathVariable("tabNameEn")String tabNameEn, HttpSession session){
+    public ModelAndView toTabPage(@PathVariable("tabNameEn")String tabNameEn, @RequestParam(defaultValue = "1",value = "pn")Integer pn, HttpSession session){
         Tab tab = tabService.getByTabName(tabNameEn);
         Integer tabId = tab.getId();
 

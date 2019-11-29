@@ -9,24 +9,7 @@
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/EdiSurface.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/EdiSurface.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/panel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/EdiSurface.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/EdiSurface.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/panel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/panel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/upload/20191113180707ly6mu.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/upload/20191113180734gpryn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/upload/20191113181026u78sp.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/upload/20191113181036o7i6b.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/upload/20191113181059076eq.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/upload/201911151403381vxu3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/upload/20191115204337kp3hj.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/upload/20191119185048ra3vz.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +189,8 @@
       <workItem from="1573995407669" duration="12890000" />
       <workItem from="1574087107171" duration="46368000" />
       <workItem from="1574302221905" duration="34422000" />
-      <workItem from="1574694190225" duration="9656000" />
+      <workItem from="1574694190225" duration="10315000" />
+      <workItem from="1575040989861" duration="3858000" />
     </task>
     <servers />
   </component>

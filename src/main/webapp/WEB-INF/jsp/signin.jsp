@@ -70,11 +70,8 @@
             <label for="Loginpwd">密码</label>
             <input type="password" class="form-control" id="Loginpwd" name="password" placeholder="请输入密码" required="required">
         </div>
-        <div class="checkbox text-left">
-            <label>
-                <input type="checkbox" id="remember">记住密码
-            </label>
-            <a style="margin-left: 30%" href="#">忘记密码?</a>
+        <div class="text-right">
+            <a  href="#">忘记密码?</a>
         </div>
         <p style="text-align: right;color: red;position: absolute" id="info"></p><br/>
         <button id="loginButton" class="btn btn-success btn-block" type="button">登录</button>
