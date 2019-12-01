@@ -114,7 +114,6 @@ public class EditorController {
         }catch (Exception e){
 
         }
-
         //初始化主编
         editor.setName(request.getParameter("name"));
         editor.setPassword(password);
@@ -143,6 +142,8 @@ public class EditorController {
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     @ResponseBody
     public Msg add(Editor editor){
+       String password = ProduceMD5.getMD5(editor.getPassword());
+       editor.setPassword(password);
         editorService.add(editor);
         return Msg.success();
     }

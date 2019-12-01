@@ -138,6 +138,8 @@ public class ReporterController {
     @RequestMapping(value = "/add",method = RequestMethod.POST)
     @ResponseBody
     public Msg add(Reporter reporter){
+        String password = ProduceMD5.getMD5(reporter.getPassword());
+        reporter.setPassword(password);
         reporterService.add(reporter);
         return Msg.success();
     }

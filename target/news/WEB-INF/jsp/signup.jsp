@@ -12,6 +12,7 @@
     <script src="<%=path %>/static/js/jquery-3.4.1.min.js"></script>
     <script src="<%=path %>/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="<%=path %>/static/js/jquery.cityselect.js" charset="gbk"></script>
+    <script src="/static/js/Editor.js"></script>
     <style>
         li {list-style-type:none;}
         html, body {
@@ -55,7 +56,6 @@
 </head>
 <body>
 
-
 <nav class="navbar navbar-default" role="navigation" style="background-color: white">
     <div class="container-fluid" style="margin-left: 10%">
         <div class="navbar-header">
@@ -75,18 +75,21 @@
                 <label class="col-sm-2 control-label">姓名</label>
                 <div class="col-sm-10" style="width: 40%;">
                     <input type="text" class="form-control" id="name" name="name" required="required">
+                    <span id="nameInfo"></span>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">密码</label>
                 <div class="col-sm-10" style="width: 40%;">
                     <input type="password" class="form-control" id="password" name="password" required="required">
+                    <span id="passwordInfo"></span>
                 </div>
             </div>
             <div class="form-group">
                 <label class="col-sm-2 control-label">再次输入密码</label>
                 <div class="col-sm-10" style="width: 40%;">
                     <input type="password" class="form-control" id="rpassword" name="rpassword" required="required">
+                    <span id="rpasswordInfo"></span>
                 </div>
             </div>
             <div class="form-group" >
@@ -100,6 +103,7 @@
                 <label class="col-sm-2 control-label">证件号</label>
                 <div class="col-sm-10" style="width: 40%;">
                     <input type="text" class="form-control" id="idNumber" name="idNumber" required="required">
+                    <span id="idNumberInfo"></span>
                 </div>
             </div>
             <div class="form-group" >
@@ -121,12 +125,14 @@
                 <label class="col-sm-2 control-label">手机号码</label>
                 <div class="col-sm-10" style="width: 40%;">
                     <input class="form-control" type="text" required id="phoneNum" name="phoneNum">
+                    <span id="phoneNumInfo"></span>
                 </div>
             </div>
             <div class="form-group" >
                 <label class="col-sm-2 control-label">邮箱</label>
                 <div class="col-sm-10" style="width: 40%;">
                     <input class="form-control" type="email" placeholder="例如:123@123.com" id="email" name="email">
+                    <span id="emailInfo"></span>
                 </div>
             </div>
             <div class="form-group">
