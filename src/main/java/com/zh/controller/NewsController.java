@@ -101,16 +101,18 @@ public class NewsController {
         Integer tabId = tab.getId();
 
         ModelAndView indexPage = new ModelAndView("index");
+        PageHelper.startPage(pn,8);
         //板块下全部新闻
-        List<News> news = newsService.listTopicsAndUsersOfTab(tabId);
+        List<News> list = newsService.listTopicsAndUsersOfTab(tabId);
+        PageInfo<News> pageInfo = new PageInfo<>(list);
         //统计
         int newsNum = newsService.getNewsNum();
         int RNum = reporterService.getRepNum();
         int ENum = editorService.getEdiNum();
         //获取用户信息
         Integer Rid = (Integer)session.getAttribute("RepId");
-
-        indexPage.addObject("news",news);
+        indexPage.addObject("pageInfo",pageInfo);
+        indexPage.addObject("news",list);
         indexPage.addObject("newsNum", newsNum);
         indexPage.addObject("usersNum",RNum+ENum);
         indexPage.addObject("tab",tab);
