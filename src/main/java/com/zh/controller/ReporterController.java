@@ -158,6 +158,8 @@ public class ReporterController {
     @RequestMapping(value = "/update/{id}",method = RequestMethod.PUT)
     @ResponseBody
     public Msg updateRepById(Reporter reporter){
+        String password = ProduceMD5.getMD5(reporter.getPassword());
+        reporter.setPassword(password);
         reporterService.updateRepById(reporter);
         return Msg.success();
     }

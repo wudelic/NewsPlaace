@@ -158,6 +158,8 @@ public class EditorController {
     @RequestMapping(value = "/update/{id}",method = RequestMethod.PUT)
     @ResponseBody
     public Msg updateEdiById(Editor editor){
+        String password = ProduceMD5.getMD5(editor.getPassword());
+        editor.setPassword(password);
         editorService.updateEdiById(editor);
         return Msg.success();
     }
