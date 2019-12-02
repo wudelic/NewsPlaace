@@ -142,23 +142,29 @@ public class NewsController {
         return newsPage;
     }
 
-    @RequestMapping("/n/newsTopic/{newsTopic}")
+    @RequestMapping("/n/newsTopic/{newsTopic:.+}")
     public ModelAndView TopictoNews(@PathVariable("newsTopic")String newsTopic,HttpSession session){
         //点击量加1
         boolean ifSucc = newsService.clickAddOneByTopic(newsTopic);
-        //获取主题信息
-        News news = newsService.selectByTopic(newsTopic);
-        //统计信息
-        int newsNum = newsService.getNewsNum();
-        int RNum = reporterService.getRepNum();
-        int ENum = editorService.getEdiNum();
-        Integer Rid = (Integer)session.getAttribute("Rid");
+        if (ifSucc){
+            //获取主题信息
+            News news = newsService.selectByTopic(newsTopic);
+            //统计信息
+            int newsNum = newsService.getNewsNum();
+            int RNum = reporterService.getRepNum();
+            int ENum = editorService.getEdiNum();
+            Integer Rid = (Integer)session.getAttribute("Rid");
 
-        ModelAndView newsPage = new ModelAndView("detail");
-        newsPage.addObject("news",news);
-        newsPage.addObject("newsNum",newsNum);
-        newsPage.addObject("usersNum",RNum+ENum);
-        return newsPage;
+            ModelAndView newsPage = new ModelAndView("detail");
+            newsPage.addObject("news",news);
+            newsPage.addObject("newsNum",newsNum);
+            newsPage.addObject("usersNum",RNum+ENum);
+            return newsPage;
+        }else {
+            ModelAndView newsPage = new ModelAndView("404");
+            return newsPage;
+        }
+
     }
     /**
      * 查询未过审核的新闻
