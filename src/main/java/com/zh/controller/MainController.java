@@ -7,6 +7,7 @@ import com.zh.service.ReporterService;
 import com.zh.service.TabService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -80,6 +81,11 @@ public class MainController {
     public ModelAndView toMR(){
         ModelAndView R = new ModelAndView("ManagementR");
         return R;
+    }
+    @RequestMapping("/index")
+    public ModelAndView toMain(){
+        ModelAndView M = new ModelAndView("/");
+        return M;
     }
 
 }

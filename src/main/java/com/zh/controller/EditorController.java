@@ -15,8 +15,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -101,18 +104,16 @@ public class EditorController {
 
     //注册
     @RequestMapping("/signUp")
-    public String signUp(Model model,HttpServletRequest request){
+    public void signUp(Model model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Editor editor = new Editor();
         //密码加密
         String password = ProduceMD5.getMD5(request.getParameter("password"));
-
         //date转化
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         Date age = new Date();
         try{
             age = df.parse(request.getParameter("age"));
         }catch (Exception e){
-
         }
         //初始化主编
         editor.setName(request.getParameter("name"));
@@ -124,10 +125,8 @@ public class EditorController {
         editor.setPhoneNum(request.getParameter("phoneNum"));
         editor.setEmail(request.getParameter("email"));
         editor.setDetail(request.getParameter("detail"));
-
         editorService.signUpEdi(editor);
-        model.addAttribute("msg","注册成功");
-        return "check";
+        request.getRequestDispatcher("/WEB-INF/jsp/check.jsp").forward(request,response);
     }
 
     //根据id删除

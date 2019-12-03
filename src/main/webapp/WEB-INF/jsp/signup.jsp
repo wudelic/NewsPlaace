@@ -70,7 +70,7 @@
         </h3>
     </div>
     <div class="panel-body">
-        <form  method="post" class="form-horizontal" role="form" style="margin-left: 5%" action="<%=path %>/editor/signUp">
+        <form  method="post" class="form-horizontal" role="form" style="margin-left: 5%" action="/editor/signUp">
             <div class="form-group" >
                 <label class="col-sm-2 control-label">姓名</label>
                 <div class="col-sm-10" style="width: 40%;">
