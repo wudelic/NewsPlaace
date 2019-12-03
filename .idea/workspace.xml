@@ -8,7 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/side.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,6 +197,9 @@
       <workItem from="1575040989861" duration="3941000" />
       <workItem from="1575179235081" duration="12224000" />
       <workItem from="1575292489873" duration="1770000" />
+      <workItem from="1575294294525" duration="2457000" />
+      <workItem from="1575297251663" duration="2450000" />
+      <workItem from="1575342386536" duration="5503000" />
     </task>
     <servers />
   </component>
@@ -218,5 +225,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java</url>
+          <line>146</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java</url>
+          <line>152</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

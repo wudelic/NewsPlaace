@@ -95,6 +95,7 @@
             if(confirm("确定上传该新闻吗？")){
                 var info = editor.txt.html();
                 document.getElementById("information").value = info;
+
             }
         }
 

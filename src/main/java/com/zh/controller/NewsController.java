@@ -141,9 +141,9 @@ public class NewsController {
         newsPage.addObject("usersNum",RNum+ENum);
         return newsPage;
     }
-
-    @RequestMapping("/n/newsTopic/{newsTopic:.+}")
-    public ModelAndView TopictoNews(@PathVariable("newsTopic")String newsTopic,HttpSession session){
+    //用请求参数，请求路径有问题
+    @RequestMapping("/n")
+    public ModelAndView TopictoNews(@RequestParam(value = "newsTopic")String newsTopic,HttpSession session){
         //点击量加1
         boolean ifSucc = newsService.clickAddOneByTopic(newsTopic);
         if (ifSucc){

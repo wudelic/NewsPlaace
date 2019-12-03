@@ -39,10 +39,10 @@
             <div class="input-group">
                 <input type="text" class="form-control NTopic topic" placeholder="输入想看的新闻">
                 <span class="input-group-btn">
-                    <input class="btn btn-default searchByTopic" type="button"/>
-                    </span>
+                    <input class="btn btn-default searchByTopic" type="button" value="搜索"/>
+                </span>
             </div>
-            <div class="searchBox" style="position: absolute;z-index: 9999; background: #ffffff; width: 167.6px; border: 1px solid #ccc; display: none" >
+            <div class="searchBox" style="position: absolute;z-index: 9999; background: #ffffff; width: 196.7px; border: 1px solid #ccc; display: none" >
 
             </div>
         </ul>
@@ -58,12 +58,12 @@
         <ul class="list-group" style="width: 100%">
             <li class="list-group-item"><a href="/Edi/Nn">查看审核列表</a></li>
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="输入想看的新闻">
-                <span class="input-group-btn">
-                    <input class="btn btn-default searchByTopic" type="button" value="搜索"/>
+                    <input type="text" class="form-control NTopic topic"  placeholder="输入想看的新闻">
+                    <span class="input-group-btn">
+                         <input class="btn btn-default searchByTopic" type="button" value="搜索"/>
                     </span>
             </div>
-            <div class="searchBox" style="position: absolute;z-index: 9999; background: #ffffff; width: 167.6px; border: 1px solid #ccc; display: none" >
+            <div class="searchBox" style="position: absolute;z-index: 9999; background: #ffffff; width: 196.7px; border: 1px solid #ccc; display: none" >
 
             </div>
         </ul>
@@ -74,11 +74,12 @@
 <script>
     $(".searchByTopic").click(function(){
         var newsTopic = $(".topic").val();
+        console.log(newsTopic)
         if (newsTopic == ""){
             alert("搜索不能为空");
             return false;
         }
-        window.location.href="/n/newsTopic/"+ newsTopic;
+        window.location.href="/n?newsTopic="+ encodeURIComponent(newsTopic);
     })
     function overFn(obj){
         $(obj).css("background", "#DBEAF9")
