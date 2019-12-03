@@ -141,7 +141,7 @@
                     <input class="form-control" type="text" id="detail" name="detail">
                 </div>
             </div>
-            <input  type="submit" onclick=" test()"  value="提交" style="margin-left: 17%"/>
+            <input  type="submit" onclick="test();return check();"  value="提交" style="margin-left: 17%"/>
         </form>
     </div>
 </div>

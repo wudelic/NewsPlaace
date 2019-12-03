@@ -8,11 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/side.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/side.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/side.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/Editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/Reporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/Reporter.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +27,8 @@
         <option value="Interface" />
         <option value="Class" />
         <option value="jsf" />
-        <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -199,7 +200,7 @@
       <workItem from="1575292489873" duration="1770000" />
       <workItem from="1575294294525" duration="2457000" />
       <workItem from="1575297251663" duration="2450000" />
-      <workItem from="1575342386536" duration="5503000" />
+      <workItem from="1575342386536" duration="11675000" />
     </task>
     <servers />
   </component>
@@ -225,26 +226,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java</url>
-          <line>146</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java</url>
-          <line>150</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java</url>
-          <line>152</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

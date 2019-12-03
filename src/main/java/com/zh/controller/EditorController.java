@@ -127,7 +127,7 @@ public class EditorController {
 
         editorService.signUpEdi(editor);
         model.addAttribute("msg","注册成功");
-        return "heiheihei";
+        return "check";
     }
 
     //根据id删除

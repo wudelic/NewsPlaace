@@ -145,7 +145,7 @@
                         <input class="form-control" type="text" id="detail" name="detail">
                     </div>
                     <div class="text-right">
-                        <button class="btn btn-primary submit" type="submit" onclick="return check(), test()" >提交</button>
+                        <button class="btn btn-primary submit" type="submit" onclick="test();return check();" >提交</button>
                         <button class="btn btn-danger" data-dismiss="modal">取消</button>
                     </div>
                     <a href="" data-toggle="modal" data-dismiss="modal" data-target="#Rsignin">已有账号？点我登录</a>
@@ -191,6 +191,7 @@
 </html>
 
 <script>
+
     function signout_confirm()
     {
         var r=confirm("确定退出?")

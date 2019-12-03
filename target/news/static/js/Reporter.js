@@ -134,7 +134,7 @@ $(function(){
 
 });
 function check(){
-    if (ok1 && ok2 && ok3 && ok4 && ok5 && ok6)
+    if (ok1 && ok2 && ok3 && ok4 && ok5 && ok6 && checkGender())
         return true;
     else{
         alert("请检查资料");
@@ -142,12 +142,26 @@ function check(){
     }
 }
 function checkadd(){
-    if (ok1 && ok2 && ok3 && ok4 && ok6)
+    if (ok1 && ok2 && ok3 && ok4 && ok6 && checkGender())
         return true;
     else{
         alert("请填写好资料");
         return false
     }
+}
+function checkGender(){
+    var sexs = document.getElementsByName("gender");
+    var flag = 0;
+    for (var i=0; i<sexs.length; i++){
+        var sex = sexs[i];
+        if (sex.checked)
+            flag++;
+    }
+    if (flag == 0){
+        alert("性别必须选择！");
+        return false;
+    }
+    return true;
 }
 
 

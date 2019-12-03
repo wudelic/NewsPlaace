@@ -125,7 +125,7 @@ public class ReporterController {
         reporter.setDetail(request.getParameter("detail"));
         reporterService.signUpReporter(reporter);
         model.addAttribute("msg","注册成功");
-        return "heiheihei";
+        return "check";
     }
 
     @ResponseBody
