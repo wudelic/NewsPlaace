@@ -8,16 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/signin.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +199,7 @@
       <workItem from="1575342386536" duration="19501000" />
       <workItem from="1575387858451" duration="630000" />
       <workItem from="1575420032723" duration="3106000" />
-      <workItem from="1575444825863" duration="8990000" />
+      <workItem from="1575444825863" duration="13669000" />
     </task>
     <servers />
   </component>

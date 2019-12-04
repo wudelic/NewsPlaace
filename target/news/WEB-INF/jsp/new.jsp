@@ -21,7 +21,7 @@
             <a href="/">News</a> › 发布新闻
         </div>
         <div class="panel-body">
-            <form action="/news/add" method="post" id="replyForm" >
+            <form action="/news/add" method="post" id="CreateNewsForm" >
                 <div class="form-group">
                     <label for="tab">发布板块</label><br/>
                     <div class="col-sm-10" style="width: 15%">
@@ -44,9 +44,10 @@
                     验证码：<input id="checks" class="input-text size-L" type="text" style="width:150px;" />
                     <img id="imgVerify" src="" alt="点击更换验证码" /><a onclick="getVerify();" rel="nofollow">看不清，换一张</a>
                     <button type="button" onclick="checkSum();" >查看输入的验证码</button>
+                    <button type="button" onclick="checkTopic();" >查看输入的标题</button>
                 </div>
                 <input class="input-xlarge focused hidden" name="content" type="text" id="information" >
-                <br><input type="submit" class="btn btn-default btn-sm" id="submitbtn" value="发布新闻" onclick="return check();">
+                <br><button type="button" class="btn btn-default btn-sm" id="submitbtn" onclick="check();">发布新闻</button>
             </form>
         </div>
     </div>
@@ -83,23 +84,45 @@
         }
     }
     editor.create();
-
+    var ok1 = false;
+    var ok2 = false;
     function check(){
+        checkTopic();
+        checkSum();
+        console.log(ok1)
+        console.log(ok2)
+       if (ok1 && ok2)
+           if(confirm("确定上传该新闻吗？")){
+               var info = editor.txt.html();
+               document.getElementById("information").value = info;
+               $("#CreateNewsForm").submit();
+           }
+       else
+           return false;
+
+    }
+    function checkTopic(){
         var topic = $("#topic").val();
         if (topic == ""){
             $("#topic").css("border-color", "red");
             $("#topicInfo").html("标题不能为空");
-            return false;
+            ok1 = false;
         }
-        checkSum();
+        $("#topic").blur(function () {
+            if (topic == ""){
+                $("#topic").css("border-color", "red");
+                $("#topicInfo").html("标题不能为空");
+                ok1 = false;
+            }else{
+                $("#topic").css("border-color", "green");
+                $("#topicInfo").html("");
+                ok1 = true;
+            }
+        })
         if (topic != ""){
             $("#topic").css("border-color", "green");
             $("#topicInfo").html("");
-            if(confirm("确定上传该新闻吗？")){
-                var info = editor.txt.html();
-                document.getElementById("information").value = info;
-
-            }
+            ok1 = true;
         }
     }
 
@@ -121,11 +144,15 @@
                 url:"/checkVerify",
                 type:"GET",
                 data:{inputStr:inputStr},
+                async:false,
                 success:function (data) {
-                    if(data==1)
-                        alert("验证码正确");
                     if (data==0)
-                        alert("验证码错误");
+                    {
+                        alert("验证码输入错误");
+                        ok2 = false;
+                    }else{
+                        ok2 = true;
+                    }
                 }
             })
         }else{
