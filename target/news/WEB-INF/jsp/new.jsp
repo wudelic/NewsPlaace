@@ -40,6 +40,11 @@
                 <div id="editor">
                     <p>请输入新闻内容</p>
                 </div>
+                <div>
+                    验证码：<input id="checks" class="input-text size-L" type="text" style="width:150px;" />
+                    <img id="imgVerify" src="" alt="点击更换验证码" /><a onclick="getVerify();" rel="nofollow">看不清，换一张</a>
+                    <button type="button" onclick="checkSum();" >查看输入的验证码</button>
+                </div>
                 <input class="input-xlarge focused hidden" name="content" type="text" id="information" >
                 <br><input type="submit" class="btn btn-default btn-sm" id="submitbtn" value="发布新闻" onclick="return check();">
             </form>
@@ -50,15 +55,12 @@
 <script type="text/javascript">
     var E = window.wangEditor;
     var editor = new E('#editor');
-   //使用base64保存图片
-    // editor.customConfig.uploadImgShowBase64 = true;
     //开启debug模式
     editor.debug = location.href.indexOf('wangeditor_debug_mode=1') > 0;
     //忽略粘贴内容中的图片
     editor.customConfig.pasteIgnoreImg = true;
     //关闭粘贴内容中的样式
     editor.customConfig.pasteFilterStyle =  false;
-
     editor.customConfig.uploadFileName = 'Image';
     editor.customConfig.uploadImgServer = '/upload';
     editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;
@@ -89,6 +91,7 @@
             $("#topicInfo").html("标题不能为空");
             return false;
         }
+        checkSum();
         if (topic != ""){
             $("#topic").css("border-color", "green");
             $("#topicInfo").html("");
@@ -98,8 +101,36 @@
 
             }
         }
+    }
 
-
+    $(document.body).ready(function () {
+        //首次获取验证码
+        $("#imgVerify").attr("src","/getVerify?"+Math.random());
+    });
+    //获取验证码
+    function getVerify(){
+        var src1=document.getElementById('imgVerify')
+        src1.src = "/getVerify?"+Math.random();
+    }
+    //校验验证码
+    function checkSum(){
+        var inputStr = $("#checks").val();
+        if(inputStr!=null && inputStr!="" && inputStr!="验证码:"){
+            inputStr = inputStr.toUpperCase();//将输入的字母全部转换成大写
+            $.ajax({
+                url:"/checkVerify",
+                type:"GET",
+                data:{inputStr:inputStr},
+                success:function (data) {
+                    if(data==1)
+                        alert("验证码正确");
+                    if (data==0)
+                        alert("验证码错误");
+                }
+            })
+        }else{
+            alert("验证码不能为空!")
+        }
     }
 </script>
 </body>

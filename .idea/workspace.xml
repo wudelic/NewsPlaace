@@ -8,12 +8,16 @@
   <component name="ChangeListManager">
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/check.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/test.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/signin.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +29,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="jsf" />
         <option value="JavaScript File" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -200,7 +204,10 @@
       <workItem from="1575292489873" duration="1770000" />
       <workItem from="1575294294525" duration="2457000" />
       <workItem from="1575297251663" duration="2450000" />
-      <workItem from="1575342386536" duration="15304000" />
+      <workItem from="1575342386536" duration="19501000" />
+      <workItem from="1575387858451" duration="630000" />
+      <workItem from="1575420032723" duration="3106000" />
+      <workItem from="1575444825863" duration="8990000" />
     </task>
     <servers />
   </component>
@@ -226,5 +233,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java</url>
+          <line>119</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

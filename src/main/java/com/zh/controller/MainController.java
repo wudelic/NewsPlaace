@@ -1,17 +1,25 @@
 package com.zh.controller;
 
+import com.zh.pojo.Msg;
 import com.zh.pojo.Tab;
 import com.zh.service.EditorService;
 import com.zh.service.NewsService;
 import com.zh.service.ReporterService;
 import com.zh.service.TabService;
+import com.zh.util.RandomValidateCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.Console;
 import java.util.List;
 
 /**
@@ -82,10 +90,33 @@ public class MainController {
         ModelAndView R = new ModelAndView("ManagementR");
         return R;
     }
-    @RequestMapping("/index")
-    public ModelAndView toMain(){
-        ModelAndView M = new ModelAndView("/");
-        return M;
-    }
 
+    /**
+     * 获得验证码
+     */
+    @RequestMapping(value = "/getVerify")
+    public void getVerify(HttpServletRequest request, HttpServletResponse response){
+        response.setContentType("image/jpeg");
+        response.setHeader("Pragma","No-cache");
+        response.setHeader("Cache-Control", "no-cache");
+        response.setDateHeader("Expire", 0);
+        RandomValidateCode randomValidateCode = new RandomValidateCode();
+        try {
+            randomValidateCode.getRandcode(request, response);//输出验证码图片方法
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @RequestMapping(value = "/checkVerify", method = RequestMethod.GET)
+    @ResponseBody
+    public int checkVerify(HttpSession session, @RequestParam("inputStr") String inputStr){
+        int message;
+        String random = (String) session.getAttribute("RANDOMVALIDATECODEKEY");
+        if (random.equals(inputStr)){
+            message = 1;
+        }else{
+            message = 0;
+        }
+        return message;
+    }
 }

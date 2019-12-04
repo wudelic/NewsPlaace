@@ -77,7 +77,7 @@
     </nav>
 </header>
 <!-- 注册窗口 -->
-<div id="Rsignup" class="modal fade" tabindex="-1">
+<div id="Rsignup" class="modal fade" tabindex="-1" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
@@ -155,7 +155,7 @@
     </div>
 </div>
 <!-- 登录窗口 -->
-<div id="Rsignin" class="modal fade">
+<div id="Rsignin" class="modal fade" aria-hidden="true" data-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
