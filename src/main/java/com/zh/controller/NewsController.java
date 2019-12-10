@@ -12,6 +12,7 @@ import com.zh.service.ReporterService;
 import com.zh.service.TabService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -39,7 +40,8 @@ public class NewsController {
     @Autowired
     TabService tabService;
     //log4j对象
-    private final Log log = LogFactory.getLog(getClass());
+    //private final Log log = LogFactory.getLog(getClass());
+    private static Logger logger=Logger.getLogger(News.class); // 获取logger实例
 
     @RequestMapping(value = "/")
     public ModelAndView toMain(@RequestParam(defaultValue = "1",value = "pn")Integer pn, HttpSession session){
@@ -85,8 +87,8 @@ public class NewsController {
         //添加news
         boolean ifSucc = newsService.addNew(news);
         if(ifSucc){
-            if (log.isInfoEnabled()){
-                log.info("新建新闻成功！");
+            if (logger.isInfoEnabled()){
+                logger.info("新建新闻成功！");
             }
         }
         indexPage = new ModelAndView("redirect:/Rep/An");

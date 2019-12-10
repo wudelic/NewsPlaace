@@ -5,7 +5,6 @@ var ok4 = false;
 var ok5 = false;
 var ok6 = false;
 $(function(){
-
     $("#idNumber").blur(function(){
         $.ajax({
             url:"../../reporter/checkIdNumber",
@@ -27,7 +26,7 @@ $(function(){
             $("#idNumberInfo").html("");
             ok6 = true;
             return true;
-        }else{
+        } else{
             $("#idNumberInfo").html("不可用");
             $("#idNumber").css("border-color", "red");
             return false;

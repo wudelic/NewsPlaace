@@ -43,8 +43,6 @@
                 <div>
                     验证码：<input id="checks" class="input-text size-L" type="text" style="width:150px;" />
                     <img id="imgVerify" src="" alt="点击更换验证码" /><a onclick="getVerify();" rel="nofollow">看不清，换一张</a>
-                    <button type="button" onclick="checkSum();" >查看输入的验证码</button>
-                    <button type="button" onclick="checkTopic();" >查看输入的标题</button>
                 </div>
                 <input class="input-xlarge focused hidden" name="content" type="text" id="information" >
                 <br><button type="button" class="btn btn-default btn-sm" id="submitbtn" onclick="check();">发布新闻</button>
