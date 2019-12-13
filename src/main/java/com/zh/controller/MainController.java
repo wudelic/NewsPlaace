@@ -119,4 +119,10 @@ public class MainController {
         }
         return message;
     }
+
+    @RequestMapping(value = "/forgetPwd", method = RequestMethod.GET)
+    public String findPassword(){
+        return "forgetPwd";
+    }
+
 }

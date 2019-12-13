@@ -8,7 +8,6 @@
 <html lang="en">
 <head>
     <meta name="Content-Type"  content="text/html;charset=utf-8">
-    <meta name="keywords" content="Newsssss">
     <title>新闻发布平台</title>
     <link rel="stylesheet" href="<%=path %>/static/bootstrap-3.3.7-dist/css/bootstrap.css">
     <script src="<%=path %>/static/js/jquery-3.4.1.min.js"></script>

@@ -26,7 +26,10 @@
                     <h3>${news.topic}</h3><br/>
                 </div>
                 <div>
+                    <c:if test="${not empty news.editor.name}">
                         <span><strong>主编：${news.editor.name}</strong></span><br>
+
+                    </c:if>
                         <span ><strong>记者：${news.reporter.name}</strong></span><br>
                 </div>
             </div>

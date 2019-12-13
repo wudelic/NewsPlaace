@@ -16,6 +16,7 @@
 	<context:property-placeholder location="classpath:db.properties"
 		system-properties-mode="FALLBACK" />
 
+
 	<!-- 配置数据源 -->
 	<bean id="dataSource"
 		  class = "com.alibaba.druid.pool.DruidDataSource" destroy-method = "close" >
@@ -48,7 +49,6 @@
 		<property name = "logAbandoned" value = "${logAbandoned}" />
 		<property name="proxyFilters">
 			<list>
-				<ref bean="wall-filter"/>
 				<ref bean="stat-filter"/>
 				<ref bean="log-filter"/>
 			</list>
@@ -66,12 +66,7 @@
 		<property name="statementExecutableSqlLogEnable" value="true" />
 	</bean>
 
-	<!-- 防御SQL攻击 -->
-	<bean id="wall-filter" class="com.alibaba.druid.wall.WallFilter">
-		<property name="config" ref="wall-config" />
-		<property name="logViolation" value="true" />
-		<!--         <property name="throwException" value="false" />   -->
-	</bean>
+
 
 	<bean id="wall-config" class="com.alibaba.druid.wall.WallConfig">
 		<property name="deleteAllow" value="false" />

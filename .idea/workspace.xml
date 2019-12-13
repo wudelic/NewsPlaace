@@ -7,28 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/NewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/Reporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/Reporter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/application-dao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/application-dao.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/db.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/log4j.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/lib/aspectjweaver-1.9.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/lib/c3p0-0.9.1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/new.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/signin.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +103,7 @@
       <module name="news" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="com.zh.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,7 +116,7 @@
       <module name="news" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="com.zh.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,7 +129,7 @@
       <module name="news" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="com.zh.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -270,7 +264,10 @@
       <workItem from="1575790090865" duration="974000" />
       <workItem from="1575791091908" duration="1273000" />
       <workItem from="1575793091133" duration="2267000" />
-      <workItem from="1575951572132" duration="819000" />
+      <workItem from="1575951572132" duration="8434000" />
+      <workItem from="1575994388116" duration="5071000" />
+      <workItem from="1576069901371" duration="2935000" />
+      <workItem from="1576200115304" duration="2156000" />
     </task>
     <servers />
   </component>
@@ -301,19 +298,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java</url>
-          <line>114</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java</url>
+          <line>132</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java</url>
-          <line>119</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java</url>
-          <line>113</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
