@@ -11,7 +11,7 @@
     <title>新闻发布平台</title>
     <link rel="stylesheet" href="<%=path %>/static/bootstrap-3.3.7-dist/css/bootstrap.css">
     <script src="<%=path %>/static/js/jquery-3.4.1.min.js"></script>
-    <script src="<%=path %>/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="<%=path %>/static/js/bootstrap.min.js"></script>
     <style>
         li {list-style-type:none;}
         html, body {

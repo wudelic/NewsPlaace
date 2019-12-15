@@ -14,18 +14,6 @@
         <result column="tabId" property="tabId" jdbcType="INTEGER"/>
         <result column="editorId" property="editorId" jdbcType="INTEGER"/>
     </resultMap>
-    <!--新闻基本结果集
-    <resultMap id="BaseResultMap" type="com.zh.pojo.News">
-        <id column="id" property="id" jdbcType="INTEGER"/>
-        <result column="topic" property="topic" jdbcType="VARCHAR"/>
-        <result column="reporterId" property="reporterId" jdbcType="INTEGER"/>
-        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
-        <result column="detail" property="detail" jdbcType="LONGVARCHAR"/>
-        <result column="picture" property="picture" jdbcType="VARCHAR"/>
-        <result column="status" property="status" jdbcType="TINYINT"/>
-        <result column="click" property="click" jdbcType="INTEGER"/>
-    </resultMap>-->
-
     <!--用于text 读取-->
     <resultMap id="ResultMapWithBLOBs" type="com.zh.pojo.News" extends="BaseResultMap">
         <result column="content" property="content" jdbcType="LONGVARCHAR"/>
@@ -228,9 +216,9 @@
         where topic=#{newsTopic}
     </update>
     <select id="selectByTopic" parameterType="java.lang.String" resultMap="topicAndUserDetail">
-        select news.*,reporter.name,editor.name as Ename from news,reporter,editor
+        select news.*,reporter.name,editor.name as Ename from news
+        left join editor on news.editorId=editor.id
+        left join reporter on news.reporterId=reporter.id
         where news.topic=#{newsTopic}
-        and news.reporterId=reporter.id
-        and (news.editorId=editor.id or news.editorId is null )
     </select>
 </mapper>

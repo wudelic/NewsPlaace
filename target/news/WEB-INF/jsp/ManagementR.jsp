@@ -30,7 +30,7 @@
     <title>管理员</title>
     <link rel="stylesheet" href="<%=path %>/static/bootstrap-3.3.7-dist/css/bootstrap.css">
     <script src="<%=path %>/static/js/jquery-3.4.1.min.js"></script>
-    <script src="<%=path %>/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="<%=path %>/static/js/bootstrap.min.js"></script>
     <script src="<%=path %>/static/js/Reporter.js"></script>
     <script src="<%=path %>/static/js/jquery.cityselect.js"></script>
     <script src = "/static/js/colResizable-1.6.js" ></script>
