@@ -5,8 +5,8 @@
 %>
 <html>
 <head>
-    <script src="<%=Rpath %>/static/js/Reporter.js"></script>
-    <script src="<%=Rpath %>/static/js/jquery.cityselect.js"></script>
+    <script src="/static/js/Reporter.js"></script>
+    <script src="/static/js/jquery.cityselect.js"></script>
 </head>
 <body onkeydown="keyLogin()">
 <header>

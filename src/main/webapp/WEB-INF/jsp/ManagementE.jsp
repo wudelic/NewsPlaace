@@ -28,13 +28,12 @@
 </style>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="${path}/static/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="<%=path %>/static/js/jquery-3.4.1.min.js"></script>
-    <script src="<%=path %>/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-    <script src="<%=path %>/static/js/Editor.js"></script>
-    <script src="<%=path %>/static/js/jquery.cityselect.js"></script>
-    <script src = "/static/js/colResizable-1.6.js" ></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
     <script src="/static/js/Editor.js"></script>
+    <script src="/static/js/jquery.cityselect.js"></script>
+    <script src="/static/js/colResizable-1.6.js" ></script>
     <title>管理员</title>
 </head>
 <body>

@@ -9,9 +9,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<%=path %>/static/bootstrap-3.3.7-dist/css/bootstrap.css">
-    <script src="<%=path %>/static/js/jquery-3.4.1.min.js"></script>
-    <script src="<%=path %>/static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
     <title>${news.topic} - NEWS </title>
 </head>
 <body>
@@ -28,14 +28,15 @@
                 <div>
                     <c:if test="${not empty news.editor.name}">
                         <span><strong>主编：${news.editor.name}</strong></span><br>
-
                     </c:if>
                         <span ><strong>记者：${news.reporter.name}</strong></span><br>
                 </div>
             </div>
             <div style="float: right;margin-top: -100px" >
                 <fmt:formatDate value="${news.createTime}" type="date" dateStyle="long"></fmt:formatDate><br>
+                <c:if test="${not empty news.editor.name}">
                 <small class="text-muted">${news.click}次点击</small>
+                </c:if>
 
             </div>
         </div>

@@ -7,9 +7,9 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
     <script src="<%=path %>/static/js/jquery-3.4.1.min.js"></script>
-    <script src="<%=path %>/static/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="<%=path %>/static/js/bootstrap.js"></script>
     <script src="<%=path %>/static/js/my_function.js"></script>
     <title>管理员</title>
 </head>

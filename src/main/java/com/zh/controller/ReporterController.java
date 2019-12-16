@@ -78,7 +78,7 @@ public class ReporterController {
             String RepName = reporter.getName();
             session.setAttribute("RepId", RepId);
             session.setAttribute("RepName", RepName);
-
+            session.setAttribute("LOGIN",reporter);
             res.put("stateCode", "2");
         }else if (loginVerify == 1){
             res.put("stateCode", "1");
@@ -198,9 +198,13 @@ public class ReporterController {
         //获取用户信息
         Integer Rid = (Integer)session.getAttribute("RepId");
         Reporter reporter = reporterService.getRepById(Rid);
-
-        ModelAndView mv = new ModelAndView("user_info");
+        ModelAndView mv;
+        mv = new ModelAndView("user_info");
         Reporter result = reporterService.getRepByName(name);
+        if (result ==null){
+            mv = new ModelAndView("404");
+            return mv;
+        }
         mv.addObject("RepInfo",result);
         mv.addObject("newsNum", newsNum);
         mv.addObject("usersNum",RNum+ENum);

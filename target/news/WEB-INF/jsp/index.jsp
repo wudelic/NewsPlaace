@@ -7,7 +7,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="Content-Type"  content="text/html;charset=utf-8">
     <title>新闻发布平台</title>
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
     <script src="/static/js/jquery-3.4.1.min.js"></script>

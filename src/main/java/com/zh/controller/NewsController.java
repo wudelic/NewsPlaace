@@ -101,8 +101,12 @@ public class NewsController {
     public ModelAndView toTabPage(@PathVariable("tabNameEn")String tabNameEn, @RequestParam(defaultValue = "1",value = "pn")Integer pn, HttpSession session){
         Tab tab = tabService.getByTabName(tabNameEn);
         Integer tabId = tab.getId();
-
-        ModelAndView indexPage = new ModelAndView("index");
+        ModelAndView indexPage;
+        if (tab ==null){
+            indexPage = new ModelAndView("404");
+            return indexPage;
+        }
+        indexPage = new ModelAndView("index");
         PageHelper.startPage(pn,8);
         //板块下全部新闻
         List<News> list = newsService.listTopicsAndUsersOfTab(tabId);
@@ -127,20 +131,26 @@ public class NewsController {
     @RequestMapping("/n/{id}")
     public ModelAndView toNews(@PathVariable("id")Integer id,HttpSession session)
     {
+        ModelAndView newsPage;
         //点击量加1
         boolean ifSucc = newsService.clickAddOne(id);
         //获取主题信息
         News news = newsService.selectById(id);
+        if (news == null){
+            newsPage = new ModelAndView("404");
+            return newsPage;
+        }
         //统计信息
         int newsNum = newsService.getNewsNum();
         int RNum = reporterService.getRepNum();
         int ENum = editorService.getEdiNum();
         Integer Rid = (Integer)session.getAttribute("Rid");
 
-        ModelAndView newsPage = new ModelAndView("detail");
+        newsPage = new ModelAndView("detail");
         newsPage.addObject("news",news);
         newsPage.addObject("newsNum",newsNum);
         newsPage.addObject("usersNum",RNum+ENum);
+
         return newsPage;
     }
     //用请求参数，请求路径有问题

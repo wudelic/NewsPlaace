@@ -27,8 +27,9 @@ public class AdminController {
     }
 
     @RequestMapping("/checkLogin")
-    public String checkLogin(Admin admin,Model model){
+    public String checkLogin(Admin admin,Model model,HttpSession session){
         admin = adminService.checkLogin(admin.getUsername(), admin.getPassword());
+        session.setAttribute("admin",admin);
         if (admin != null){
             model.addAttribute("admin",admin);
             return "Management";

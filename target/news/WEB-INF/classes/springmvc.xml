@@ -23,13 +23,17 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 
-	<!-- 拦截器-->
+	<!-- 拦截器
+	1.未登录拦截
+	2.登录非特定用户拦截????
+	-->
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/Rep/*" />
 			<mvc:mapping path="/Edi/*" />
 			<bean class="com.zh.interceptor.LoginInterceptor"></bean>
 		</mvc:interceptor>
+
 	</mvc:interceptors>
 
 

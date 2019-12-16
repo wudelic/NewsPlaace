@@ -81,13 +81,26 @@ public class MainController {
     }
 
     @RequestMapping("/ManagementE")
-    public ModelAndView toME(){
-        ModelAndView M = new ModelAndView("ManagementE");
+    public ModelAndView toME(HttpSession session){
+        ModelAndView M;
+        if (session.getAttribute("admin") == null)
+        {
+            M = new ModelAndView("NotAccess");
+            return M;
+        }
+
+        M = new ModelAndView("ManagementE");
         return M;
     }
     @RequestMapping("/ManagementR")
-    public ModelAndView toMR(){
-        ModelAndView R = new ModelAndView("ManagementR");
+    public ModelAndView toMR(HttpSession session){
+        ModelAndView R;
+        if(session.getAttribute("admin") == null){
+            R = new ModelAndView("NotAccess");
+            return R;
+        }
+
+        R = new ModelAndView("ManagementR");
         return R;
     }
 

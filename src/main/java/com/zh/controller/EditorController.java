@@ -77,7 +77,7 @@ public class EditorController {
             String EdiName = editor.getName();
             session.setAttribute("EdiId", EdiId);
             session.setAttribute("EdiName", EdiName);
-
+            session.setAttribute("LOGIN",editor);
             res.put("stateCode", "2");
         }else if (loginVerify == 1){
             res.put("stateCode", "1");
@@ -193,9 +193,13 @@ public class EditorController {
         //获取用户信息
         Integer Eid = (Integer)session.getAttribute("EdiId");
         Editor editor = editorService.getEdiById(Eid);
-
-        ModelAndView mv = new ModelAndView("user_info");
+        ModelAndView mv;
+        mv = new ModelAndView("user_info");
         Editor result = editorService.geEdiByName(name);
+        if (result == null){
+            mv = new ModelAndView("404");
+            return mv;
+        }
         mv.addObject("EdiInfo",result);
         mv.addObject("newsNum", newsNum);
         mv.addObject("usersNum",RNum+ENum);
