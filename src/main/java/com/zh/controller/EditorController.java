@@ -9,6 +9,7 @@ import com.zh.service.NewsService;
 import com.zh.service.ReporterService;
 import com.zh.service.TabService;
 import com.zh.util.ProduceMD5;
+import com.zh.util.SecurityCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -206,4 +207,48 @@ public class EditorController {
         mv.addObject("editor",editor);
         return mv;
     }
+
+    @PostMapping("/reSetPassword")
+    public ModelAndView reset(@RequestParam("email")String email) throws Exception{
+        ModelAndView mv ;
+        Integer securityCode = SecurityCode.GetSecurityCode();
+        Editor editor = editorService.queryEdiByEmail(email);
+
+        if (editor!=null){
+            editor.setSecurityCode(securityCode);
+            editorService.updateSecurity(editor);
+            editorService.SendSecurityCode(email,securityCode);
+            mv = new ModelAndView("setPassword");
+        }else {
+            mv = new ModelAndView("reSetPasswords_fail");
+        }
+        return mv;
+    }
+
+    @PostMapping("/setPassword")
+    public ModelAndView resetPwd(@RequestParam("securityCode")String securityCode1,@RequestParam("password")String password,@RequestParam("email")String email) throws Exception{
+        ModelAndView mv ;
+        Integer sc = new Integer(securityCode1);
+        Editor editor = editorService.queryEdiByEmail(email);
+        if (editor == null){
+            mv = new ModelAndView("reSetFail");
+            return mv;
+        }
+        Integer a = editor.getSecurityCode();
+       if (a.equals(sc)){
+            editor.setPassword(ProduceMD5.getMD5(password));
+            editorService.updatePwd(editor);
+
+            editor.setSecurityCode(0);
+            editorService.updateSecurity(editor);
+            mv = new ModelAndView("reSetSuccess");
+        }else {
+            mv = new ModelAndView("reSetFail");
+        }
+
+        return mv;
+    }
+
 }
+
+

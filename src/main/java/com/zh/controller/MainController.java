@@ -138,4 +138,11 @@ public class MainController {
         return "forgetPwd";
     }
 
+
+    @RequestMapping("/reSetPassword")
+    public ModelAndView reset(){
+        ModelAndView mv = new ModelAndView("reSetPassword");
+        return mv;
+    }
+
 }

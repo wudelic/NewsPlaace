@@ -8,32 +8,38 @@
   <component name="ChangeListManager">
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/NewsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/EditorMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/springmvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/EdiSurface.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/EdiSurface.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Management.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/Management.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ManagementE.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ManagementE.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ManagementR.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/ManagementR.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/RepSurface.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/RepSurface.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/check.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/check.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/new.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signup.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user_info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/user_info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mapper/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mapper/NewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/mapper/EditorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/mapper/EditorMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/pojo/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/pojo/Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/EditorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/EditorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/EditorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/EditorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-service.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mapper/EditorMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/EditorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/ReporterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/ReporterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/springmvc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/mapper/EditorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/mapper/EditorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/pojo/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/pojo/Editor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/EditorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/EditorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/impl/EditorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/impl/EditorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/EditorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/EditorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/EditorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/EditorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/pojo/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/pojo/Editor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/EditorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/EditorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/EditorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/EditorServiceImpl.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,14 +47,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="jsf" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -81,21 +101,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.zh.pojo" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\news\src\main\webapp\WEB-INF\jsp" />
       <recent name="D:\project\news\src\main\webapp\static\js" />
       <recent name="D:\project\news\src\main\webapp\static\css" />
       <recent name="D:\project\news\src\main\webapp\static" />
       <recent name="D:\project\news\src\main\java" />
-      <recent name="D:\project\news\src\main\webapp" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.zh.pojo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,7 +174,7 @@
     <configuration name="Tomcat 8.5.47" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.47" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="news:war exploded">
           <settings>
@@ -229,6 +250,12 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.abc" />
+      <item itemvalue="Application.Demo" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.47" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.abc" />
@@ -282,7 +309,12 @@
       <workItem from="1576069901371" duration="2935000" />
       <workItem from="1576200115304" duration="2808000" />
       <workItem from="1576382285859" duration="15742000" />
-      <workItem from="1576474160762" duration="7302000" />
+      <workItem from="1576474160762" duration="8113000" />
+      <workItem from="1576511368163" duration="2313000" />
+      <workItem from="1576549698487" duration="749000" />
+      <workItem from="1576550892201" duration="1869000" />
+      <workItem from="1576573335597" duration="736000" />
+      <workItem from="1576574093485" duration="11500000" />
     </task>
     <servers />
   </component>
@@ -308,5 +340,51 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>213</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>214</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>217</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>218</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>219</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>230</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>231</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
+          <line>236</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -5,7 +5,7 @@ import com.zh.pojo.Editor;
 import com.zh.service.EditorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import com.zh.util.resetMail.SendCode;
 import java.util.List;
 
 @Service("editor")
@@ -105,5 +105,23 @@ public class EditorServiceImpl implements EditorService{
         return editorMapper.selectByName(name);
     }
 
+    @Override
+    public Editor queryEdiByEmail(String email) {
+        return editorMapper.queryEdiByEmail(email);
+    }
+
+    @Override
+    public void updatePwd(Editor editor) {
+        editorMapper.updatePwd(editor);
+    }
+
+    @Override
+    public void updateSecurity(Editor editor) {
+        editorMapper.updateSecurity(editor);
+    }
+    public void SendSecurityCode(String mail,Integer code) throws Exception {
+        String codes=code.toString();
+        SendCode.sendMail(mail,codes);
+    }
 
 }

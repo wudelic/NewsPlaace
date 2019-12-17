@@ -96,4 +96,17 @@
         select * from editor
         where name=#{name}
     </select>
+    
+    <select id="queryEdiByEmail" resultType="com.zh.pojo.Editor">
+        select * from editor
+        where email=#{email}
+    </select>
+
+    <update id="updatePwd">
+        update editor set password=#{password} where id=#{id}
+    </update>
+
+    <update id="updateSecurity">
+        update editor set SecurityCode=#{SecurityCode} where id=#{id}
+    </update>
 </mapper>

@@ -33,4 +33,10 @@ public interface EditorMapper {
     int countEdi();
 
     Editor selectByName(String name);
+
+    Editor queryEdiByEmail(String email);
+
+    void updatePwd(Editor editor);
+
+    void updateSecurity(Editor editor);
 }

@@ -100,12 +100,13 @@ public class NewsController {
     @RequestMapping("/tab/{tabNameEn}")
     public ModelAndView toTabPage(@PathVariable("tabNameEn")String tabNameEn, @RequestParam(defaultValue = "1",value = "pn")Integer pn, HttpSession session){
         Tab tab = tabService.getByTabName(tabNameEn);
-        Integer tabId = tab.getId();
         ModelAndView indexPage;
         if (tab ==null){
             indexPage = new ModelAndView("404");
             return indexPage;
         }
+        Integer tabId = tab.getId();
+
         indexPage = new ModelAndView("index");
         PageHelper.startPage(pn,8);
         //板块下全部新闻

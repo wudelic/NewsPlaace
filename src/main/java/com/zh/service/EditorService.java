@@ -34,4 +34,12 @@ public interface EditorService {
     int getEdiNum();
 
     Editor geEdiByName(String name);
+
+    Editor queryEdiByEmail(String email);
+    
+    void updatePwd(Editor editor);
+
+    void updateSecurity(Editor editor);
+
+    void SendSecurityCode(String email, Integer securityCode) throws Exception;
 }

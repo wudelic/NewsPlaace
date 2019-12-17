@@ -25,7 +25,18 @@ public class Editor {
     private String email;
 
     private String detail;
+
     private Date createTime;
+
+    private Integer SecurityCode;//重置密码验证码
+
+    public Integer getSecurityCode() {
+        return SecurityCode;
+    }
+
+    public void setSecurityCode(Integer securityCode) {
+        SecurityCode = securityCode;
+    }
 
     public Date getCreateTime() {
         return createTime;
