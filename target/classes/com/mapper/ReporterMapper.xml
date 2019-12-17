@@ -23,6 +23,10 @@
         select count(*) from reporter where idNumber = #{idNumber}
     </select>
 
+    <select id="existsReporterByEmail" resultType="java.lang.Integer">
+        select count(*) from reporter where email=#{email}
+    </select>
+
     <insert id="signUpReporter" parameterType="com.zh.pojo.Reporter">
         INSERT INTO
         reporter (name, password, gender, idNumber, age, address, phoneNum, email, detail)

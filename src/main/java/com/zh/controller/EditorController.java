@@ -102,6 +102,19 @@ public class EditorController {
         }
         return message;
     }
+    @RequestMapping(value = "/checkEmail", method = RequestMethod.POST)
+    @ResponseBody
+    public int checkEmail(String email){
+        boolean isExists = editorService.existsEdiByEmail(email);
+        int message;
+        if(isExists){
+            message = 1;
+        }else
+        {
+            message = 0;
+        }
+        return message;
+    }
 
     //注册
     @RequestMapping("/signUp")

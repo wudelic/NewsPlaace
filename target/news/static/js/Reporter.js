@@ -15,10 +15,26 @@ $(function(){
                 if (data == 1){
                     $("#idNumber").css("border-color", "red");
                     $("#idNumberInfo").html("该证件号已被使用");
+                    ok6 = false;
                 }
             }
         })
     });
+    $("#email").blur(function () {
+        $.ajax({
+            url:"../../reporter/checkEmail",
+            type:"POST",
+            datatype:"json",
+            data:{email:$("#email").val()},
+            success:function(data){
+                if (data == 1){
+                    $("#email").css("border-color","red");
+                    $("#emailInfo").html("邮箱已被注册");
+                    ok3 = false;
+                }
+            }
+        })
+    })
     $("#idNumber").blur(function(){
         var reg = /^[1-9]{1}[0-9]{14}$|^[1-9]{1}[0-9]{16}([0-9]|[xX])$/;
         if(reg.test($("#idNumber").val())){

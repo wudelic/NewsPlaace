@@ -104,6 +104,19 @@ public class ReporterController {
         return message;
     }
 
+    @RequestMapping(value = "/checkEmail",method = RequestMethod.POST)
+    @ResponseBody
+    public int checkEmail(String email){
+        boolean isExists = reporterService.existsReporterByEmail(email);
+        int message;
+        if (isExists){
+            message=1;
+        }
+        else {
+            message=0;
+        }
+        return message;
+    }
     @RequestMapping("/signUp")
     public void signUp(Model model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Reporter reporter = new Reporter();

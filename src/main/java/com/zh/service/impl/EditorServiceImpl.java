@@ -30,6 +30,12 @@ public class EditorServiceImpl implements EditorService{
     }
 
     @Override
+    public boolean existsEdiByEmail(String email) {
+        int flag = editorMapper.existsEdiByEmail(email);
+        return flag==1?true:false;
+    }
+
+    @Override
     public Editor checkEdi(String idNumber, String password) {
         Editor editor = editorMapper.checkEdi(idNumber);
         if (editor != null && editor.getPassword().equals(password)){

@@ -12,6 +12,8 @@ public interface EditorMapper {
 
     int existsEdi(String idNumber);
 
+    int existsEdiByEmail(String email);
+
     Editor checkEdi(@Param("idNumber") String idNumber);
 
     void signUpEdi(Editor editor);
@@ -39,4 +41,6 @@ public interface EditorMapper {
     void updatePwd(Editor editor);
 
     void updateSecurity(Editor editor);
+
+
 }

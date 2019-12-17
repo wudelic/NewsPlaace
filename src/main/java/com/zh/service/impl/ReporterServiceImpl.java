@@ -35,6 +35,12 @@ public class ReporterServiceImpl implements ReporterService {
     }
 
     @Override
+    public boolean existsReporterByEmail(String email) {
+        int flag = reporterMapper.existsReporterByEmail(email);
+        return flag==1?true:false;
+    }
+
+    @Override
     public void signUpReporter(Reporter reporter) {
         reporterMapper.signUpReporter(reporter);
     }

@@ -9,35 +9,25 @@
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/EditorMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/ReporterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/ReporterMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/NewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/mapper/EditorMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/mapper/EditorMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/pojo/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/pojo/Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/mapper/ReporterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/mapper/ReporterMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/EditorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/EditorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/ReporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/ReporterService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/EditorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/EditorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-dao.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-service.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/ReporterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/ReporterServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/Editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/Reporter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/Reporter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mapper/EditorMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/EditorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/NewsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zh/mapper/EditorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/mapper/EditorMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/pojo/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/pojo/Editor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/EditorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/EditorService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/impl/EditorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/impl/EditorServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/springmvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/EditorMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/EditorMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/EditorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/NewsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/EditorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/EditorMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/pojo/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/pojo/Editor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/EditorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/EditorService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/EditorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/EditorServiceImpl.class" afterDir="false" />
     </list>
@@ -314,7 +304,7 @@
       <workItem from="1576549698487" duration="749000" />
       <workItem from="1576550892201" duration="1869000" />
       <workItem from="1576573335597" duration="736000" />
-      <workItem from="1576574093485" duration="11500000" />
+      <workItem from="1576574093485" duration="14707000" />
     </task>
     <servers />
   </component>
@@ -346,42 +336,42 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
-          <line>213</line>
+          <line>226</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
-          <line>214</line>
+          <line>227</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
-          <line>217</line>
+          <line>230</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
-          <line>218</line>
+          <line>231</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
-          <line>219</line>
+          <line>232</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
-          <line>230</line>
+          <line>243</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
-          <line>231</line>
+          <line>244</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java</url>
-          <line>236</line>
+          <line>249</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>

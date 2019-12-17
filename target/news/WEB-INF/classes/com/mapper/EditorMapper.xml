@@ -24,6 +24,10 @@
         select count(*) from editor where idNumber = #{idNumber}
     </select>
 
+    <select id="existsEdiByEmail" resultType="java.lang.Integer">
+        select count(*) from editor where email=#{email}
+    </select>
+
     <insert id="signUpEdi" parameterType="com.zh.pojo.Editor">
         INSERT INTO
         editor (name, password, gender, idNumber, age, address, phoneNum, email, detail)

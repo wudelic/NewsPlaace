@@ -6,13 +6,15 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface ReporterMapper {
-   List<Reporter> queryAllReporter();
+    List<Reporter> queryAllReporter();
 
-   List<Reporter> queryRepByIdNumber(@Param("idNumber")String idNumber);
+    List<Reporter> queryRepByIdNumber(@Param("idNumber")String idNumber);
 
-   Reporter checkReporter(@Param("idNumber") String idNumber);
+    Reporter checkReporter(@Param("idNumber") String idNumber);
 
-   int existsReporter(String idNumber);
+    int existsReporter(String idNumber);
+
+    int existsReporterByEmail(String email);
 
     void signUpReporter(Reporter reporter);
 
@@ -33,4 +35,6 @@ public interface ReporterMapper {
     int countRep();
 
     Reporter selectByName(String name);
+
+
 }

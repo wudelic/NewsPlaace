@@ -11,6 +11,7 @@ public interface EditorService {
 
     boolean existsEdi(String idNumber);
 
+    boolean existsEdiByEmail(String email);
     Editor checkEdi(String idNumber, String password);
 
     void signUpEdi(Editor editor);
@@ -42,4 +43,6 @@ public interface EditorService {
     void updateSecurity(Editor editor);
 
     void SendSecurityCode(String email, Integer securityCode) throws Exception;
+
+
 }

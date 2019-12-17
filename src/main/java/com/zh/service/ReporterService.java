@@ -12,6 +12,8 @@ public interface ReporterService {
 
     boolean existsReporter(String idNumber);
 
+    boolean existsReporterByEmail(String email);
+
     void signUpReporter(Reporter reporter);
 
     void deleteReporter(Integer id);
@@ -35,4 +37,6 @@ public interface ReporterService {
     int getRepNum();
 
     Reporter getRepByName(String name);
+
+
 }
