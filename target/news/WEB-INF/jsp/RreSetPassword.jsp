@@ -8,8 +8,9 @@
 <body>
 <form action="/reporter/reSetPassword"  method="post">
     <table width="250" border="1">
+        <h1>请输入你的邮箱</h1>
         <tr>
-            <td>邮 箱:</td>
+            <td>邮箱:</td>
             <td><input type="text" name="email"/></td>
             <td><input type="submit" name="submit" value="提交"/></td>
         </tr>

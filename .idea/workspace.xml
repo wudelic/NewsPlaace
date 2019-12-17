@@ -8,46 +8,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9f18cb0d-d6b1-4ff1-8079-8c78d36ce84c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mapper/ReporterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mapper/ReporterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/EditorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/controller/ReporterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/mapper/ReporterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/mapper/ReporterMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/pojo/Reporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/pojo/Reporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/ReporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/ReporterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/ReporterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/service/impl/ReporterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/util/resetMail/SendCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/util/resetMail/SendCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/util/resetMail/SendCode_Local.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zh/util/resetMail/SendCode_QQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zh/util/resetMail/SendCode_163.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reSetPassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/EreSetPassword.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/setPassword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/EsetPassword.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/signin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mapper/ReporterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mapper/ReporterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/EditorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/controller/ReporterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/controller/ReporterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/mapper/ReporterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/mapper/ReporterMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/pojo/Reporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/pojo/Reporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/ReporterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/ReporterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/service/impl/ReporterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/service/impl/ReporterServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/util/resetMail/SendCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zh/util/resetMail/SendCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/util/resetMail/SendCode_Local$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zh/util/resetMail/SendCode_Local.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/ReporterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/mapper/ReporterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/EditorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/EditorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/ReporterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/controller/ReporterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/ReporterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/mapper/ReporterMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/pojo/Reporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/pojo/Reporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/ReporterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/ReporterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/ReporterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/service/impl/ReporterServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/util/resetMail/SendCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/classes/com/zh/util/resetMail/SendCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/reSetPassword.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/setPassword.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/signin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/signin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/news/static/js/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/static/js/Editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reSetFail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reSetFail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reSetPasswords_fail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reSetPasswords_fail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reSetSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/reSetSuccess.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/reSetFail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/reSetFail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/reSetPasswords_fail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/reSetPasswords_fail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/news/WEB-INF/jsp/reSetSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/news/WEB-INF/jsp/reSetSuccess.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -322,7 +288,7 @@
       <workItem from="1576549698487" duration="749000" />
       <workItem from="1576550892201" duration="1869000" />
       <workItem from="1576573335597" duration="736000" />
-      <workItem from="1576574093485" duration="17535000" />
+      <workItem from="1576574093485" duration="18289000" />
     </task>
     <servers />
   </component>

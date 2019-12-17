@@ -8,12 +8,13 @@
 <body>
 <form action="/reporter/setPassword"  method="post">
     <table width="250" border="1">
+        <h1>已发送验证码到您的邮箱</h1>
         <tr>
             <td>验证码</td>
             <td><input type="text" name="securityCode"/></td>
         </tr>
         <tr>
-            <td>密 码:</td>
+            <td>新密码:</td>
             <td><input type="password" name="password"/></td>
         </tr>
         <tr>
