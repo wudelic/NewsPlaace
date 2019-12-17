@@ -71,7 +71,7 @@
             <input type="password" class="form-control" id="Loginpwd" name="password" placeholder="请输入密码" required="required">
         </div>
         <div class="text-right">
-            <a href="/forgetPwd">忘记密码?</a>
+            <a href="/EreSetPassword">忘记密码?</a>
         </div>
         <p style="text-align: right;color: red;position: absolute" id="info"></p><br/>
         <button id="loginButton" class="btn btn-success btn-block" type="button">登录</button>

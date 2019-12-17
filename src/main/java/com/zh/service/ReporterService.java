@@ -39,4 +39,12 @@ public interface ReporterService {
     Reporter getRepByName(String name);
 
 
+    Reporter queryEdiByEmail(String email);
+
+    void updateSecurity(Reporter reporter);
+
+    void SendSecurityCode(String email, Integer securityCode) throws Exception;
+
+    void updatePwd(Reporter reporter);
+
 }

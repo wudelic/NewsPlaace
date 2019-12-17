@@ -28,6 +28,16 @@ public class Reporter {
 
     private Date createTime;
 
+    private Integer SecurityCode;
+
+    public Integer getSecurityCode() {
+        return SecurityCode;
+    }
+
+    public void setSecurityCode(Integer securityCode) {
+        SecurityCode = securityCode;
+    }
+
     public Date getCreateTime() {
         return createTime;
     }
@@ -115,4 +125,6 @@ public class Reporter {
     public void setDetail(String detail) {
         this.detail = detail;
     }
+
+
 }

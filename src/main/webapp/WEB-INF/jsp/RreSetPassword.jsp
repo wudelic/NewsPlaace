@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>记者邮箱验证</title>
 </head>
 <body>
-<form action="/editor/reSetPassword"  method="post">
+<form action="/reporter/reSetPassword"  method="post">
     <table width="250" border="1">
         <tr>
             <td>邮 箱:</td>
@@ -17,6 +17,7 @@
 </form>
 </body>
 </html>
+
 
 
 

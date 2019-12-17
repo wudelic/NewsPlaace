@@ -101,5 +101,20 @@
         select * from reporter
         where name =#{name}
     </select>
+
+    <select id="queryRepByEmail" resultType="com.zh.pojo.Reporter">
+        select * from reporter
+        where email=#{email}
+    </select>
+
+    <update id="updatePwd">
+        update reporter set password=#{password}
+        where id=#{id}
+    </update>
+
+    <update id="updateSecurity">
+        update reporter set SecurityCode=#{SecurityCode}
+        where id=#{id}
+    </update>
 </mapper>
 

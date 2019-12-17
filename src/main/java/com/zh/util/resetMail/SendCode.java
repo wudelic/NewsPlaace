@@ -10,8 +10,8 @@ public class SendCode {
          *@Descriptuion TODO 根据邮箱类型发送邮件
          **/
         if(mail.endsWith("@163.com"))
+            SendCode_163.sendMail(mail, code);
+        if(mail.endsWith("@qq.com"))
             SendCode_QQ.sendMail(mail, code);
-        if(mail.endsWith("@life.com"))
-            SendCode_Local.sendMail(mail, code);
     }
 }

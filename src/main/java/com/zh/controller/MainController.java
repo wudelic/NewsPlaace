@@ -139,10 +139,14 @@ public class MainController {
     }
 
 
-    @RequestMapping("/reSetPassword")
-    public ModelAndView reset(){
-        ModelAndView mv = new ModelAndView("reSetPassword");
+    @RequestMapping("/EreSetPassword")
+    public ModelAndView Ereset(){
+        ModelAndView mv = new ModelAndView("EreSetPassword");
         return mv;
     }
-
+    @RequestMapping("/RreSetPassword")
+    public ModelAndView Rreset(){
+        ModelAndView mv = new ModelAndView("RreSetPassword");
+        return mv;
+    }
 }

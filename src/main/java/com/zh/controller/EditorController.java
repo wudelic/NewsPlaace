@@ -231,7 +231,7 @@ public class EditorController {
             editor.setSecurityCode(securityCode);
             editorService.updateSecurity(editor);
             editorService.SendSecurityCode(email,securityCode);
-            mv = new ModelAndView("setPassword");
+            mv = new ModelAndView("EsetPassword");
         }else {
             mv = new ModelAndView("reSetPasswords_fail");
         }

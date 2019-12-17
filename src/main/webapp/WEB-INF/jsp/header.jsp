@@ -181,6 +181,7 @@
                         <button class="btn btn-primary" type="button" id="loginButton" >登录</button>
                         <button class="btn btn-danger" data-dismiss="modal">取消</button>
                     </div>
+                    <a href="/RreSetPassword">忘记密码</a><br>
                     <a href="" data-toggle="modal" data-dismiss="modal" data-target="#Rsignup">还没有账号？点我注册</a>
                 </form>
             </div>

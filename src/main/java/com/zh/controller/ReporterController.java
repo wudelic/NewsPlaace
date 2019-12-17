@@ -10,6 +10,7 @@ import com.zh.service.NewsService;
 import com.zh.service.ReporterService;
 import com.zh.service.TabService;
 import com.zh.util.ProduceMD5;
+import com.zh.util.SecurityCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
@@ -222,6 +223,47 @@ public class ReporterController {
         mv.addObject("newsNum", newsNum);
         mv.addObject("usersNum",RNum+ENum);
         mv.addObject("reporter",reporter);
+        return mv;
+    }
+
+    @PostMapping("/reSetPassword")
+    public ModelAndView reset(@RequestParam("email")String email) throws Exception{
+        ModelAndView mv ;
+        Integer securityCode = SecurityCode.GetSecurityCode();
+        Reporter reporter = reporterService.queryEdiByEmail(email);
+
+        if (reporter!=null){
+            reporter.setSecurityCode(securityCode);
+            reporterService.updateSecurity(reporter);
+            reporterService.SendSecurityCode(email,securityCode);
+            mv = new ModelAndView("RsetPassword");
+        }else {
+            mv = new ModelAndView("reSetPasswords_fail");
+        }
+        return mv;
+    }
+
+    @PostMapping("/setPassword")
+    public ModelAndView resetPwd(@RequestParam("securityCode")String securityCode1,@RequestParam("password")String password,@RequestParam("email")String email) throws Exception{
+        ModelAndView mv ;
+        Integer sc = new Integer(securityCode1);
+        Reporter reporter = reporterService.queryEdiByEmail(email);
+        if (reporter == null){
+            mv = new ModelAndView("reSetFail");
+            return mv;
+        }
+        Integer a = reporter.getSecurityCode();
+        if (a.equals(sc)){
+            reporter.setPassword(ProduceMD5.getMD5(password));
+            reporterService.updatePwd(reporter);
+
+            reporter.setSecurityCode(0);
+            reporterService.updateSecurity(reporter);
+            mv = new ModelAndView("reSetSuccess");
+        }else {
+            mv = new ModelAndView("reSetFail");
+        }
+
         return mv;
     }
 }

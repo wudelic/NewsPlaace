@@ -3,6 +3,7 @@ package com.zh.service.impl;
 import com.zh.mapper.ReporterMapper;
 import com.zh.pojo.Reporter;
 import com.zh.service.ReporterService;
+import com.zh.util.resetMail.SendCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -111,5 +112,27 @@ public class ReporterServiceImpl implements ReporterService {
     public Reporter getRepByName(String name) {
         Reporter reporter = reporterMapper.selectByName(name);
         return reporter;
+    }
+
+    @Override
+    public Reporter queryEdiByEmail(String email) {
+        return reporterMapper.queryRepByEmail(email);
+    }
+
+    @Override
+    public void updateSecurity(Reporter reporter) {
+        reporterMapper.updateSecurity(reporter);
+    }
+
+    @Override
+    public void SendSecurityCode(String mail, Integer code) throws Exception {
+        String codes = code.toString();
+        SendCode.sendMail(mail,codes);
+    }
+
+    @Override
+    public void updatePwd(Reporter reporter) {
+        reporterMapper.updatePwd(reporter);
+
     }
 }

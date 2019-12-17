@@ -3,10 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>记者设置新密码</title>
 </head>
 <body>
-<form action="/editor/setPassword"  method="post">
+<form action="/reporter/setPassword"  method="post">
     <table width="250" border="1">
         <tr>
             <td>验证码</td>

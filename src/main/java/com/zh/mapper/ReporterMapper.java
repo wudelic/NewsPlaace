@@ -36,5 +36,9 @@ public interface ReporterMapper {
 
     Reporter selectByName(String name);
 
+    Reporter queryRepByEmail(String email);
 
+    void updateSecurity(Reporter reporter);
+
+    void updatePwd(Reporter reporter);
 }

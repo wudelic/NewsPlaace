@@ -15,6 +15,7 @@ $(function(){
                 if (data == 1){
                     $("#idNumber").css("border-color", "red");
                     $("#idNumberInfo").html("该证件号已被使用");
+                    ok6 = false;
                 }
             }
         })
@@ -28,6 +29,7 @@ $(function(){
                 if(data == 1){
                     $("#email").css("border-color", "red");
                     $("#emailInfo").html("邮箱已被注册");
+                    ok3 = false;
                 }
             }
         })
